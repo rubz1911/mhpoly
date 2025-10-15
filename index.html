@@ -3,92 +3,2184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MH Poly — Policy Library</title>
+  <title>MH Poly — Policy Library (Static)</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rubz1911.github.io/mhpoly/" />
   <style>
-    :root{--pad:16px;--radius:16px;--shadow:0 8px 20px rgba(0,0,0,0.08);--muted:#666;}
-    *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
-    body{margin:0;background:#f7f7fb;color:#222;line-height:1.55;padding:24px;max-width:1000px;margin-inline:auto;}
-    header{margin-bottom:20px;}
-    h1{margin:0 0 6px 0;font-size:1.6rem;}
-    .note{color:var(--muted);font-size:0.95rem;margin-top:4px}
-    .doc{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad);margin:18px 0;}
-    .doc h2{margin:0 0 8px 0;font-size:1.15rem}
-    .doc .meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
-    .doc pre{white-space:pre-wrap;margin:0;overflow-wrap:anywhere}
-    .btn{border:1px solid #ddd;background:#fafafa;border-radius:12px;padding:6px 10px;text-decoration:none;color:#222}
-    .btn:hover{background:#f0f0f5}
-    code{background:#f0f0f5;padding:2px 6px;border-radius:6px}
-    .error{background:#fff3f3;border:1px solid #f2c2c2;color:#8b0000;border-radius:12px;padding:12px}
-  </style>
+:root{--pad:16px;--radius:16px;--shadow:0 8px 20px rgba(0,0,0,0.08);--muted:#666;}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
+body{margin:0;background:#f7f7fb;color:#222;line-height:1.55;padding:24px;max-width:1000px;margin-inline:auto;}
+header{margin-bottom:20px;}
+h1{margin:0 0 6px 0;font-size:1.6rem;}
+.note{color:#666;font-size:0.95rem;margin-top:4px}
+.doc{background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.08);padding:16px;margin:18px 0;}
+.doc h2{margin:0 0 8px 0;font-size:1.15rem}
+.doc .meta{color:#666;font-size:0.9rem;margin-bottom:8px}
+.doc pre{white-space:pre-wrap;margin:0;overflow-wrap:anywhere}
+.btn{border:1px solid #ddd;background:#fafafa;border-radius:12px;padding:6px 10px;text-decoration:none;color:#222}
+.btn:hover{background:#f0f0f5}
+code{background:#f0f0f5;padding:2px 6px;border-radius:6px}
+nav ul{padding-left:20px;margin:8px 0}
+nav li{margin:4px 0}
+</style>
 </head>
 <body>
   <header>
-    <h1>MH Poly — Policy Library</h1>
+    <h1>MH Poly — Policy Library (Static)</h1>
     <div class="note">
-      Displays all text files from <code>/mhpoly/library/</code>. Each policy renders inline below.
-      Ensure files are saved as <strong>UTF-8</strong> to avoid replacement characters.
+      This page is statically generated on each push. All policy text is inlined below for crawler/copilot access.
     </div>
+    <nav>
+      <p><strong>Direct links (no JS):</strong></p>
+      <ul>
+        <li><a href="/mhpoly/library/COI0003C_CIMPLE.txt">COI0003C_CIMPLE.txt</a></li>
+        <li><a href="/mhpoly/library/MH4080.txt">MH4080.txt</a></li>
+        <li><a href="/mhpoly/library/MH4755.txt">MH4755.txt</a></li>
+        <li><a href="/mhpoly/library/MH5005.txt">MH5005.txt</a></li>
+      </ul>
+    </nav>
   </header>
+  <div id="docs">
+<article class="doc"><h2>COI0003C_CIMPLE.txt</h2><div class="meta"><a class="btn" href="/mhpoly/library/COI0003C_CIMPLE.txt" download>Download</a> <span class="note">Source: <code>/mhpoly/library/COI0003C_CIMPLE.txt</code></span></div><pre>American Bankers Insurance Company of Florida
+[A Stock Insurance Company]
+[11222 Quail Roost Drive, Miami, FL 33157-6596 (305) 253-2244]
 
-  <div id="docs">Loading…</div>
+COMMERCIAL INLAND MARINE PROTECTION LENDER EXPOSURE
+(MANUFACTURED HOME)
 
-  <script>
-    // Repo base path
-    const BASE_PATH = "/mhpoly";
+CERTIFICATE OF INSURANCE 
 
-    // Files to render (order matters)
-    const FILENAMES = [
-      "MH5005.txt",
-      "MH4755.txt",
-      "MH4080.txt",
-      "COI0003C_CIMPLE.txt"      
-    ];
+TABLE OF CONTENTS
 
-    const ROOT = `${location.origin}${BASE_PATH}/library/`;
-    const container = document.getElementById("docs");
 
-    function sectionTemplate(name, bodyHtml){
-      return `
-        <article class="doc">
-          <h2>${escapeHtml(name)}</h2>
-          <div class="meta">
-            <a class="btn" href="${ROOT}${encodeURIComponent(name)}" download>Download</a>
-            <span class="note">Source: <code>${BASE_PATH}/library/${escapeHtml(name)}</code></span>
-          </div>
-          <pre>${bodyHtml}</pre>
-        </article>
-      `;
-    }
+Insuring Agreement 	1
+Definitions 	1-2
+Section I - Coverage	2
+Section II – Exclusions 	2
+Section III – Conditions:
+	Action Against Us	2
+	Acts of Agents	2
+	Appraisal 	2-3
+	Automatic Reinstatement of Coverage	3
+		Bankruptcy or Insolvency	3
+	Cancellation	3
+	Concealment and Fraud	3
+	Conformity to State Statutes	3
 
-    function escapeHtml(s){
-      return s.replace(/[&<>"']/g, m => ({
-        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-      }[m]));
-    }
+Deductible	3
+Examination of Records	3
+Lenders Interest	3
+Liberalization	3
+Limitation of Transfer	3
+Location of Property	3
+No Benefit to Bailee	3-4
+Other Insurance	4
+Our Payment Methods	4
+Our Right to Recover Payment	4
+Premium	4
+Premium Refund	4
+Settlement of Claim Requirements	4-5
 
-    async function loadAll(){
-      container.innerHTML = "";
-      for(const name of FILENAMES){
-        const url = ROOT + encodeURIComponent(name);
-        try{
-          const res = await fetch(url, {cache:"no-store"});
-          if(!res.ok){
-            container.insertAdjacentHTML("beforeend",
-              sectionTemplate(name, `Could not load. Status: ${res.status} ${res.statusText}`));
-            continue;
-          }
-          const text = await res.text();
-          container.insertAdjacentHTML("beforeend", sectionTemplate(name, escapeHtml(text)));
-        }catch(e){
-          container.insertAdjacentHTML("beforeend",
-            sectionTemplate(name, "Network error while fetching this file."));
-          console.error(e);
-        }
-      }
-      if(container.innerHTML.trim() === "") container.textContent = "No files to display.";
-    }
 
-    loadAll();
-  </script>
+____________________________________________________________________________________________________________
+
+
+INSURING AGREEMENT
+
+We agree to provide the coverage described in this Certificate of Insurance in return for the payment of premium and compliance with all applicable conditions of this Certificate of Insurance. 
+
+DEFINITIONS
+
+We, us, and our means American Bankers Insurance Company of Florida.
+
+Actual cash value means the amount it would cost to repair or replace damaged property with material of like kind and quality, less allowance for physical deterioration and depreciation, including obsolescence.
+Alteration means changes made in the property by someone in lawful possession of the property resulting in a reduction in value.  
+
+Borrower means the individual or retail purchaser shown on the Certificate of Insurance Declarations who is indebted to the lender under a legally enforceable security agreement.
+Business means:
+1.	any full or part-time trade, profession, occupation or activity engaged in for compensation;
+2.	rental or holding for rental part of the manufactured home as a residence, private garage, office, or school; or
+3.	providing home day care services to a person(s) other than borrower and receiving monetary or other compensation for such services.
+Conversion means the wrongful use of insured property by someone in lawful possession of the property including the transfer of ownership without the permission of the lienholder or any other party holding an interest in the property.
+In transit means the period of time during which the leveling jacks or blocks are removed and all utilities are disconnected for the purpose of transporting the manufactured home from one location to another. This applies whether or not the manufactured home is momentarily in motion and whether on a public roadway or otherwise.
+
+Lender means the lienholder (person or organization) shown as the Master Policyholder on the Certificate of Insurance Declarations, who has a legal interest in the property which serves as collateral under a security agreement. 
+
+Manufactured home means one, two or more factory fabricated, transportable units, including attached structures and their replacements which remain part of the manufactured home.
+Manufactured home includes:
+1.	parts, equipment and accessories as described in the certificate of origin, manufacturer’s invoice, sales contract and replacements of these items which remain part of the manufactured home; and
+2.	the tie-down anchoring systems.
+The manufactured home must be:
+1.	constructed to be towed on a chassis or other similar means of transportation;
+2.	connected to utilities; and
+3.	designed with or without a permanent foundation for year round living. Property means a manufactured home written as collateral for a loan as described on the Certificate of Insurance Declarations.
+Property means a manufactured home written as collateral for a loan as described on the Certificate of Insurance Declarations.
+
+
+
+Secretion means that someone in lawful possession of the property has moved or placed it in a new location, and the owner, lienholder or mortgagee is unaware of the new location.
+
+Security agreement means any valid and enforceable lien instrument evidencing indebtedness to, or creating a lien on property held by the lender as collateral, and scheduled for monthly payments. These instruments shall include:
+1.	Conditional Sales Contract;
+2.	Chattel Mortgage;
+3.	Conditional Bill of Sale;
+4.	Promissory Note;
+5.	Chattel Trust Deed;
+6.	Deed of Trust;
+7.	Secured Interest;
+8.	Trust Receipt;
+9.	Certificate of Title;
+10.	Financing Statement; or
+11.	Retail Installment Sales Contract.
+
+SECTION I - COVERAGE
+
+We will pay for direct and accidental physical loss to covered property which occurs during the policy period shown in the Certificate of Insurance Declarations except for the causes of loss shown in Section II. Exclusions.   
+
+SECTION II - EXCLUSIONS
+
+A. We will not pay for loss caused directly or indirectly by: 
+1. alteration, conversion, embezzlement or secretion by any person in lawful possession of the property;
+2. birds, rodents, insects, vermin or animals;
+3.	condensation, humidity, or vapor, or by continuous or repeated seepage or leakage of water or steam over a period of weeks, months or years.  This exclusion does not apply to loss caused by sudden and accidental bursting, tearing apart, cracking, burning or bulging of the system, due to the pressure of, or lack of, water or steam from  plumbing, heating, fire sprinkler or air conditioning systems, or from within a household appliance;
+4.	damage caused by tenants;
+5.	dishonest, fraudulent or criminal acts by the borrower;
+6.	enforcement of any governmental requirement regulating construction, confiscation (including from civil authority), repair, demolition, sale, occupancy or relocation of the property;
+7.	freezing, rust, mold, wet or dry rot, corrosion or contamination;
+8.	leakage from rain, sleet or snow or its resulting damage whether or not wind driven. However, this exclusion does not apply if a covered peril causes an opening in the roof or to the exterior of the manufactured home, which causes the leakage;
+9.	nuclear action which means nuclear reaction, radiation or radioactive contamination. Direct loss by fire resulting from nuclear action is insured;
+10.	riot, civil commotion, revolution or insurrection;
+11.	settling, cracking, shrinking, bulging or expansion of pavements, patios, foundations of the property or any of its original parts; 
+12.	smog, smoke from agricultural smudging or industrial operations;
+13.	vandalism or malicious mischief, if the property is unoccupied for more than 30 consecutive days before the loss;
+14.	war, hostile or warlike action in time of peace or war whether declared or not declared;
+15.	water backing up through sewers or drains or water below the surface of the ground; or
+16.	wear and tear, latent defects, marring, deterioration, inherent vice, neglect, abusive use, mechanical, structural or electrical breakdown or failure, or manufacturer defect.
+B. 	We do not provide coverage for: 
+1.	loss to tires, wheels, and axles, unless damage was caused by fire while attached to the property or if stolen from inside the property;
+2.	personal property;
+3.	property while in transit;
+4.	property held as collateral under any floor plan or field warehouse type of financing;
+5.	property used for any illegal trade or illegal business;
+6.	property used exclusively for any business, commercial or non-residential purposes; or
+7.	tie-down anchoring systems if caused by or resulting from rust, corrosion or faulty installation.
+
+SECTION III - CONDITIONS
+
+A. ACTION AGAINST US
+
+The borrower may not bring action against us unless:
+1.   	there has been full compliance with all of the terms of this Certificate of Insurance; and
+2.	action is brought within one (1) year after the date  the direct physical loss or damage occurred.
+
+B. ACTS OF AGENTS
+
+Knowledge by our authorized agent of any fact that breaches a condition of this Certificate of Insurance will be knowledge by us, if such fact is known by our authorized agent at the time the Certificate of Insurance is issued.
+
+C. APPRAISAL
+If the lender, the borrower and we cannot agree on the amount of loss, either party:
+1.	may demand an appraisal of the loss; and
+2.	has the right to select a competent and disinterested appraiser within fifteen (15) days from the date of disagreement.
+The appraisers will select an umpire. If the appraisers are unable to agree upon an umpire within fifteen (15) days, the lender, the borrower and we may ask a judge of a court of record in the lender’s or the borrower’s state to select an umpire. The appraisers will then determine the amount of loss. If they cannot agree on the actual cash value and the amount of loss, any differences will be submitted to the umpire. A decision by any two will be binding on all parties.
+
+
+
+Each party will:
+1.	pay its chosen appraiser; and
+2.	share the expense of the appraisal and umpire equally.
+We do not waive any of our rights under this Certificate of Insurance by agreeing to an appraisal.
+
+D. AUTOMATIC REINSTATEMENT OF COVERAGE
+
+Any damage to property under this Certificate of Insurance will reduce the amount of coverage available by the amount of the damage.  Coverage will return to the limit of liability shown on the Certificate of Insurance Declarations upon completion of repairs or replacements.
+
+E. BANKRUPTY OR INSOLVENCY
+
+Bankruptcy or insolvency of the lender or the borrower will not relieve us of any obligation under this Certificate of Insurance.
+
+F. CANCELLATION
+
+	1.	This Certificate of Insurance may be cancelled as follows:
+a.	The lender may cancel the Certificate of Insurance by delivering or mailing to us and, unless the property is repossessed, the borrower written notice before cancellation is to become effective.
+b.	We may cancel the Certificate of Insurance by delivering or mailing to the lender and the borrower written notice at least:
+(1)	ten (10) days before the effective date of cancellation, if cancellation is for nonpayment of premium; or
+(2)	thirty (30) days before the effective date of cancellation, if cancellation is for any other reason.
+c.	The borrower may cancel by first obtaining the lender’s written consent and delivering or mailing to us written notice stating when thereafter cancellation will take effect.
+
+2.	Any Certificate of Insurance will immediately terminate, with or without notice, upon:
+a.	payment in full of the obligation assumed under the security agreement;
+b.	sale, trade, transfer, abandonment or repossession of the property; or
+c.	the inception of other insurance to cover the property, naming the lender as loss payee and providing  at least the same coverage.
+
+G. CONCEALMENT AND FRAUD
+
+We will cancel the borrower’s interest but not the lender’s interest in this Certificate of Insurance, whether before or after a loss, if the borrower:
+1.	conceals or misrepresents any material fact;
+2.	makes any fraudulent statement(s); or
+3.	engages in any fraudulent conduct,
+a.	in connection with this insurance; or
+b.	in presentation of a claim.
+
+H.	CONFORMITY TO STATE STATUTES
+
+If any provision of this Certificate of Insurance conflicts with state or federal law or regulation, it is amended to conform to the minimum requirements of such statutes where it is issued, upon the effective date.
+
+I. DEDUCTIBLE
+
+Covered losses are subject to a deductible amount as shown on the Certificate of Insurance Declarations. If the loss is equal to or less than the deductible amount, there is no recovery under this Certificate of Insurance. If the loss is greater than the deductible amount, we will pay the amount of loss as determined by OUR PAYMENT METHODS, not to exceed the limit of liability shown on this Certificate of Insurance.  The deductible will apply on a per occurrence basis.
+
+J. EXAMINATION OF RECORDS
+
+We will have access to the lender’s books and records at all reasonable times.  Upon our request, the lender will provide original or certified copies of any required documents, books, accounts, bills, invoices or vouchers.  Any evasion or attempted evasion by the lender in connection with reports, payment of premium, or any matter relating to this insurance may void this Certificate of Insurance and shall be an absolute defense to suit or action brought under this Certificate of Insurance.
+
+K. LENDER’S INTEREST
+
+Except as to the application of a deductible, the lender’s interest in this insurance will not be reduced by any acts or omissions of the borrower over which the lender has no knowledge or control.
+
+L. LIBERALIZATION
+
+If we adopt any revision which would broaden coverage without an additional premium charge, the broadened coverage will immediately apply to this Certificate of Insurance.
+
+M. LIMITATION OF TRANSFER
+
+Coverage provided under a Certificate of Insurance is not transferable to any other property. 
+
+N. LOCATION OF PROPERTY
+
+We will pay for losses that occur during the policy period shown on the Certificate of Insurance Declarations while the property is within the United States of America, its territories or possessions.
+
+O. NO BENEFIT TO BAILEE
+
+This Certificate of Insurance does not provide coverage to benefit directly or indirectly any person, organization or entity:
+
+
+1.	who is caring for or handling the property, other than the lender or the borrower; or
+2.	holding, storing or transporting the property for a fee.
+P. OTHER INSURANCE
+
+A Certificate of Insurance is issued because the required evidence of insurance on the property was not received. Upon receipt of such evidence of insurance, the lender will promptly notify us or our agent and request coverage to be cancelled.  Coverage on the property will terminate as of the effective date of the other acceptable insurance.  The unearned premium will be computed in accordance with the terms of this Certificate of Insurance.
+If at the time of loss, there is other insurance on the covered property naming the lender as loss payee and providing at least the same coverage, this Certificate of Insurance will terminate as of the effective date of the other acceptable insurance. The unearned premium will be computed in accordance with the terms of this Certificate of Insurance.
+
+Q. OUR PAYMENT METHODS
+1. 	Covered losses are settled as follows:
+a.	Partial Losses- – the cost to repair or replace the damaged portion of the property without deduction for depreciation up to the limit of liability shown on the Certificate of Insurance Declarations, less any deductible. 
+b.	Total Losses- the limit of liability shown on the Certificate of Insurance Declarations. 
+2.	Our payment methods for specific types of losses:
+a.	Pairs and Sets - in case of loss to part of a pair, set, series of objects, pieces or panels, either interior or exterior, we may:
+(1)	repair or replace any part to restore the pair or set to its value before the loss; or
+(2)	pay the difference between the actual cash value of the pair or set before and after the loss.
+We cannot guarantee the availability of parts or replacements.  We will not be obligated to repair or replace the entire pair, set or series of objects, piece or panel when a part is lost or damaged.  Matching existing or adjacent part, piece or panel will be attempted but not required.
+b.	Hail - the amount we pay for loss or damage from hail depends on the type of loss or damage it causes:
+(1)	Hail can cause structural damage, which is the actual penetration of the exterior surface or the cracking or breaking of support materials.  When this type of loss or damage occurs, we will pay the cost of repairing or replacing the damaged portion of the property.
+(2)	Hail often dents the exterior surface of the manufactured home.  Since there is no structural damage, this will in no way affect the utility of the manufactured home.  The amount we pay for this will be the difference between the actual cash value of the property immediately before the loss and its actual cash value immediately after the loss.
+R. OUR RIGHT TO RECOVER PAYMENT
+
+If we make any payment under this Certificate of Insurance and the lender or the borrower have the right to recover damages from a third-party, with respect to the event giving rise to such payment, we have the legal right of subrogation against that party. The lender or the borrower will:
+1.	assign to us all rights of recovery against any such person or organization;
+2.	execute and deliver to us any papers or security agreement;
+3.	at our request, do whatever is reasonably necessary to enable us to exercise our subrogation rights; and
+4.	do nothing after a loss to prejudice our rights.
+
+We waive our right to recover payment against the borrower if the loss did not originate through the borrower’s willful or deliberate actions, knowledge or intent.
+
+If the borrower accepts payment from any person or organization responsible for the loss, we reserve the right of recovery against the borrower.
+
+If we recover more than our payment, we will reimburse the lender for the borrower’s account.
+
+S. PREMIUM
+
+The premium on each property covered shall be calculated using the rates in effect at the effective date of each Certificate of Insurance. 
+
+T. PREMIUM REFUND
+
+If a Certificate of Insurance is canceled for any reason, we will refund the premium on a pro rata basis.
+
+U.	SETTLEMENT OF CLAIM REQUIREMENTS
+
+1.	In case of a loss to covered property, the borrower must:
+a.	take reasonable steps after a loss to protect the property from further loss. If the borrower fails to do so, any further damage will not be covered by this Certificate of Insurance;
+b.	notify us or our agent of every loss or damage which may become a claim under this Certificate of Insurance. The submission of proof of loss shall constitute notification;
+c.	submit a proof of loss (on forms supplied by us), to the lender within ninety (90) days from the date of the loss or as soon as reasonably possible. The borrower’s failure to do so will void any claim under this Certificate of Insurance for that loss with respect to the borrower’s interest;
+d.	permit us to inspect and appraise the damaged property before its repair or disposal; and
+e.	cooperate with us in the investigation, settlement, or defense of any claim or suit.
+
+
+
+
+
+2.	In the event of a claim, we may require:
+a.	examination under oath; and/or
+b.	a sworn signed statement from:
+(1)	the lender, the lender’s officers, agents or employees; and/or
+(2)	the borrower or members of the borrower’s household.
+
+3.	In the event of an unrecovered theft, the lender will assign to us:
+a.	the security agreement to the extent as it relates to the covered property;
+b.	the deed;
+c.	the title; and
+d.	the lender’s interest in the stolen property,
+upon settlement of the claim.
+
+We will adjust all losses with the lender.  Loss will be made payable to the lender and the borrower as their interests appear, either by a single instrument or by separate instruments payable respectively to the lender and the borrower, at our option.  
+
+We will pay a claim within sixty (60) days after we receive proof of loss.
+
+
+
+
+
+IN WITNESS WHEREOF, we have caused this Certificate of Insurance to be signed by our President and Secretary, but it shall not be valid unless countersigned on the Certificate of Insurance Declarations by our duly authorized agent (where required by state law).
+
+
+
+
+	______________________					________________________
+	  Secretary	President 
+
+
+
+COI0003C-0816	Page 1	
+
+</pre></article><article class="doc"><h2>MH4080.txt</h2><div class="meta"><a class="btn" href="/mhpoly/library/MH4080.txt" download>Download</a> <span class="note">Source: <code>/mhpoly/library/MH4080.txt</code></span></div><pre>
+THIS IS YOUR 
+MOBILOWNERS POLICY
+
+
+
+
+
+
+
+			WE WELCOME YOU AS A POLICYHOLDER OF
+			AMERICAN BANKERS INSURANCE
+			COMPANY OF FLORIDA
+			INTERNATIONAL HEADQUARTERS: MIAMI, FLORIDA
+
+
+
+American Bankers
+
+Mobilowners Policy 
+Includes...
+
+
+
+
+	?	Broader coverage
+	?	Faster, better claim service
+	?	Convenience and reliability
+
+
+
+
+
+OUR business is helping YOU when YOU’RE in trouble – and providing YOU with peace of mind.
+
+For all the protection YOU get, OUR rates are still the lowest possible. This policy means what it says plainly, in language YOU can understand. Should something happen and YOU need US – just call. OUR specialists show up immediately and get the work done without delay.
+
+When YOU face a loss, that’s when YOU find out how good YOUR insurance really is. American Bankers became one of the largest writers in Mobile Home Insurance by understanding YOUR problems. WE know YOUR home is YOUR largest investment and WE want to help YOU protect it.
+
+This Mobilowners Policy is a legal contract between YOU and US. It contains the full terms of OUR agreements.
+
+PLEASE READ YOUR POLICY CAREFULLY.
+
+
+This policy is a legal contract between you and us. The new Mobilowners Policy has been:
+•    designed for your easy reference;
+•    simplified to make it more understandable; and
+•    arranged to better display the available coverages.
+
+READ YOUR POLICY CAREFULLY.
+
+YOUR
+AMERICAN BANKERS
+MOBILOWNERS POLICY
+INDEX
+
+
+	Page
+INSURING AGREEMENT 	 3
+PHYSICAL DAMAGE 	 3
+Comprehensive Coverage Defined 	 3
+Comprehensive Mobile Home Coverage 	 3
+Comprehensive Adjacent Structures Coverage 	 3
+Comprehensive Personal Effects Coverage 	 3
+Personal Effects Doesn’t Include 	 3
+Personal Effects Items Subject to Limited 
+Coverage 	3
+Extension of Personal Effects Coverage 	 4
+Trip Coverage 	 4
+Natural Disaster Protection 	 4
+Your Additional Coverages 	 4
+Additional Living Expense Coverage 	 4
+Credit Card and Depositor’s Forgery Coverage 	 4
+Debris Removal Coverage 	 5
+Emergency Removal Service Coverage 	 5
+Fire Department Service Coverage 	 5
+Radio and Television Antenna Coverage 	 5
+Trees, Shrubs, Plants and Lawn Coverage 	 5
+Tie-Down Equipment 	 5
+Our Payment Methods 	 5
+Our Payment Methods for Specific Types of
+Loss 	 5
+Deductible 	 6
+Physical Damage Doesn’t Provide Payment for:	6
+LIABILITY 	 6
+Definitions 	 7
+Personal Liability Coverage 	 7
+Medical Payments to Others Coverage 	 7
+Claim Expense 	 7
+First Aid Expenses 	 7
+Damage to Property of Others 	 7
+Liability Doesn’t Provide Payment for 	 7
+
+	Page
+GENERAL POLICY CONDITIONS 	 8
+Appraisals 	 8
+Automatic Reinstatement of Coverage 	 8
+Bankruptcy 	 8
+Cancellation or Nonrenewal 	 8
+Changes in Your Policy 	 9
+Legal Action Against Us 	 9
+Lienholder Interest 	 9
+Limits of Liability 	 10
+Our Right to Recover From Others 	 10
+Other Insurance 	 10
+Location 	 10
+Transfer of This Policy 	 10
+What to do When You Have a Loss	 10
+Required State Changes 	 10
+SECURED INTEREST PROTECTION 
+ENDORSEMENT 	12
+Collision or Upset 	 12
+Alteration 	 12
+Conversion 	 12
+Concealment 	 12
+Repossession Expense 	 12
+Our Payment Methods 	 12
+Deductible 	 12
+Secured Interest Protection Doesn’t 
+Provide Coverage 	 12
+General Conditions of Secured Interest 
+Protection	 13
+Other Insurance 	 13
+Our Right to Recover From Others 	 13
+What to Do When a Loss Occurs	 13
+Important Dollar-Saving Reminders	14
+
+
+YOUR AMERICAN BANKERS MOBILOWNERS POLICY
+
+INSURING AGREEMENT
+
+WE, WE’LL, US, OUR, always means AMERICAN BANKERS INSURANCE COMPANY OF FLORIDA, Miami, Florida.
+YOU, YOUR, YOURS means the person named on Page One and that person’s husband or wife or other member of YOUR family who lives in the same Mobile Home, as the named insured. YOU, YOUR, YOURS can mean each or all of YOU.
+With YOUR payment of the premium, WE agree to provide the insurance YOU have selected as shown on Page One. This is subject to all policy terms and conditions. Page One is the separate enclosed page and is a part of this policy.
+WE provide insurance only for covered losses which occur during the Policy Period shown on Page One.
+
+PHYSICAL DAMAGE
+
+Physical Damage always refers to damage to property YOU own. WE’LL identify the coverage WE provide for YOUR mobile home, adjacent structures and personal effects.
+
+
+COMPREHENSIVE COVERAGE DEFINED
+	WE’LL pay for direct, sudden and accidental loss of, or damage to YOUR mobile home, adjacent structures and personal effects - not caused by collision or upset in transit. This is subject to all policy terms and conditions. Accidental glass breakage, loss or damage from missiles, falling objects, theft, windstorm, animal collision and collision of a motor vehicle with YOUR mobile home at its permanent location are all considered Comprehensive losses.
+
+COMPREHENSIVE MOBILE HOME COVERAGE
+	WE’LL pay for direct, sudden and accidental loss of, or damage to YOUR mobile home, described on Page One, its original parts, equipment and accessories furnished by the manufacturer, dealer or seller of the mobile home and replacements of these items. YOUR Comprehensive Mobile Home Coverage will include all items listed in the certificate of origin, bill of sale, manufacturers invoice or on the original sales invoice given to YOU at the time YOU purchased YOUR mobile home and which are inside or attached to YOUR mobile home.
+	Comprehensive Mobile Home Coverage doesn’t apply while the mobile home is in transit.
+
+COMPREHENSIVE ADJACENT STRUCTURES COVERAGE
+	WE’LL pay for direct, sudden and accidental loss of or damage to adjacent structures YOU own.
+	Adjacent Structures are structures on YOUR mobile home premises which are not attached to the mobile home.
+	Comprehensive Adjacent Structures Coverage doesn’t apply while the adjacent structures are in transit.
+
+COMPREHENSIVE PERSONAL EFFECTS COVERAGE
+	WE’LL pay for direct, sudden and accidental loss of or damage to YOUR clothing, cooking utensils, radios, TV’s, record players and YOUR other personal possessions up to the amount shown on Page One. These personal effects must be located in YOUR mobile home or a fully enclosed adjacent structure located on YOUR premises. Personal effects are items incidental to the use of YOUR mobile home as a dwelling.
+	Coverage includes loss or damage caused by theft, including property while in any bank, trust or safe deposit company, public warehouse or occupied dwelling not owned or occupied by or rented by YOU where the property has been placed for safe keeping.
+	Mysterious disappearance loss is not insured.
+
+	PERSONAL EFFECTS DOESN’T INCLUDE:
+	Any motor vehicle licensed or not, for use on or off public roads except golf carts while used for golfing, riding lawn mowers or equipment usual and incidental to the maintenance of YOUR mobile home premises.
+	YOUR animals, boats, aircraft, property of roomers or boarders, boat motors and money or securities;
+	Tape decks, tapes, two-way radios or record players installed in or primarily used in any motor vehicle, boat or aircraft;
+	Property separately listed and separately insured by any other insurance; or
+	Any item listed or insured under 
+	Comprehensive Adjacent Structures Coverage.
+
+	PERSONAL EFFECTS ITEMS SUBJECT TO LIMITED COVERAGE
+	This coverage includes the following special items: Collections of stamps or collections of coins, jewelry, art, antiques, heirlooms, cameras, golf equipment, musical instruments, guns and furs. WE’LL pay only up to $250 for each of these special items but not more than $500 maximum for all losses from one occurrence. WE’LL pay for loss to these special items only when caused by fire, lightning, earthquake, landslide, windstorm, flood, rising waters, robbery, or burglary. There must be visible signs of forced entry for a loss to be caused by burglary.
+	If YOU own any of these special items with values higher than WE provide here, ask YOUR agent for Scheduled Personal Property Coverage.
+
+	EXTENSION OF PERSONAL EFFECTS COVERAGE
+	WE’LL also pay up to 10% of the amount of Comprehensive Personal Effects Coverage for loss of, or damage to YOUR personal effects outside of, or off the premises of YOUR mobile home or a fully enclosed adjacent structure caused by fire, lightning, windstorm, earthquake, landslide, flood, rising water or theft.
+
+TRIP COVERAGE
+	This is an optional coverage. YOU can buy this coverage each time YOU move YOUR mobile home, for an additional premium.
+	WE’LL show the period of coverage on Page One or on a separate attachment to this policy.
+	If YOU buy this coverage, WE’LL pay for direct, sudden and accidental loss of, or damage to YOUR mobile home occurring while YOUR mobile home is being moved.
+	Collision which damages only wheels, tires, axles and running gear isn’t insured.
+	Coverage starts when the leveling jacks or blocks are removed and utilities are disconnected from YOUR mobile home for the purpose of transportation. Coverage ends when YOUR mobile home is unhitched from the transporting vehicle.
+
+In each claim for loss or damage $100 will be deducted from the total amount of loss unless otherwise shown on Page One.
+Before YOUR mobile home is moved, tell US or YOUR agent about it.
+
+NATURAL DISASTER PROTECTION
+	This is optional protection. If YOU borrowed money to buy YOUR mobile home, Natural Disaster Protection may increase the amount of YOUR Comprehensive or Named Perils Mobile Home Coverage in order to pay off YOUR loan. YOU can buy Natural Disaster Protection for an additional premium.
+	If YOU buy this protection, WE’LL pay for either the actual cash value of YOUR mobile home or the outstanding principal balance of the loan for YOUR mobile home, whichever is more, if YOUR mobile home is destroyed by windstorm, flood, earthquake, landslide or hail. WE reserve the right to offer YOU a replacement mobile home of a similar kind, quality and value.
+	Outstanding principal balance of the loan means the unpaid amount YOU owe YOUR lienholder named on Page One, minus past due payments, unearned interest, insurance, finance and other carrying charges computed as of the date of YOUR loss. This is also minus any penalties or other charges which may have been added to YOUR loan after the loan was finalized.
+
+	Flood means:
+
+	A general temporary condition of partial or complete covering of normally dry land areas from:
+		The overflow of inland tidal water, or 
+		The unusual and rapid buildup or run-off of surface water from any source, or
+		Mudslides or mudflows which are caused by the build-up of water on or under the ground, or
+		Flood can also mean the collapse or sinking of land along the shore of a body of water as a result of erosion or undermining caused by waves or currents of water exceeding the normal levels, which results in a Flood as defined above.
+	Flood, as defined above, is at least as broad as that offered by the Standard Flood Insurance Policy {NFIA-1 (Ed. 7-74)}.
+
+YOUR ADDITIONAL COVERAGES
+	When YOU buy Comprehensive Mobile Home Coverage WE automatically include the following additional coverages. WE’LL pay for these losses with no deductible.
+
+ADDITIONAL LIVING EXPENSE COVERAGE
+	WE’LL pay YOU up to $20 a day for a maximum of 30 days for reasonable Additional Living Expenses YOU pay when YOU can’t live in YOUR mobile home because it is damaged or destroyed by a Comprehensive or Named Perils Mobile Home Coverage loss. OUR payment ends when YOUR mobile home is repaired or replaced or seven days after WE have offered to make a reasonable cash settlement. WE’LL need paid receipts to verify YOUR reasonable additional living expenses incurred in addition to YOUR normal living expenses.
+
+	CREDIT CARD AND DEPOSITOR’S FORGERY COVERAGE
+		Credit Card Forgery
+		WE’LL pay up to $50 for each credit card loss, but not more than $500 for all losses from one occurrence when YOU are legally obligated to pay the issuers of the credit cards because of unauthorized use of one or more of YOUR credit cards which have been lost or stolen. This coverage doesn’t apply to YOUR use of YOUR credit cards, or anyone who uses YOUR credit cards with YOUR permission. All YOU have to do is fully comply with the terms under which the credit cards were issued to YOU.
+		Depositor’s Forgery
+		WE’LL pay up to $500 to YOU for a loss which YOU become legally obligated to pay through forgery or alteration of YOUR check, draft, promissory note, bill of exchange or any similar written promise, order or direction. This includes any check or draft made or drawn in YOUR name, made payable to a fictitious payee.
+		Court Costs
+		WE’LL pay up to $500 for YOUR reasonable attorney’s fees, court costs and other legal expense when suit is brought against YOU for someone else’s unauthorized use of YOUR credit cards or forgery or alteration of YOUR checks, drafts, promissory notes, bills of exchange or similar written promises, order or direction. OUR payment for these expenses is in addition to any other amount WE may pay for these losses.
+		Counterfeit Money
+		WE’LL pay up to $50 for any one loss YOU have when YOU, in good faith, accept counterfeit United States or Canadian paper money. WE’LL pay YOU up to $100 maximum for two or more losses in any one policy year of coverage.
+	Credit Card and Depositor’s Forgery Coverage pays only for YOUR personal non-business losses. Losses from YOUR job, business or other means of earning a living aren’t insured.
+
+	DEBRIS REMOVAL COVERAGE
+		WE’LL pay the actual cost up to $50 for removal of debris from YOUR premises when deposited by windstorm or other hazard covered by this policy. This doesn’t apply to removal of debris which would be considered normal maintenance.
+
+EMERGENCY REMOVAL SERVICE COVERAGE
+	WE’LL pay when YOUR mobile home must be moved because it is threatened by a loss covered by this policy. The amount of coverage is the actual cost up to $200 if YOUR mobile home can be removed in one section and the actual cost up to $400 for two or more sections.
+
+	FIRE DEPARTMENT SERVICE COVERAGE
+		WE’LL pay when the fire department is called because of a fire in, or endangering YOUR mobile home. WE’LL pay for the actual fire department charge up to $100 or the amount indicated on Page One.
+
+	RADIO AND TELEVISION ANTENNA COVERAGE
+		WE’LL pay the actual cost up to $50 or the amount indicated on Page One for loss of, or damage to YOUR outside radio or television antennas located on YOUR mobile home premises caused by fire, lightning, earthquake, landslide, flood, rising water robbery, burglary and windstorm.
+
+	TREES, SHRUBS, PLANTS AND LAWN COVERAGE
+		WE’LL pay for loss or damage to YOUR trees, shrubs, plants and lawn caused by fire, lightning, explosion, riot or civil commotion, aircraft, vandalism, malicious mischief or motor vehicles not owned or operated by YOU.
+		Coverage is the actual cost up to $25 for any one plant or shrub, the actual cost up to $100 for the lawn or one tree, with a maximum combined payment of $200 for each occurrence. WE don’t insure property grown for business purposes.
+
+	TIE-DOWN EQUIPMENT
+		WE’LL pay for damage to YOUR mobile home tie-down anchoring systems. This doesn’t include loss or damage from rust, corrosion or faulty installation.
+
+OUR PAYMENT METHODS
+	The amount WE pay for loss of, or damage to YOUR mobile home, adjacent structures and personal effects except for the payment methods of Natural Disaster Protection will be the lowest of:
+		The difference between the actual cash value of YOUR property immediately before the loss and its actual cash value immediately after the loss, or
+		The cost of repairing the damage, or
+		The actual cash value of YOUR property immediately preceding the loss, or
+		The cost of replacing YOUR property, or
+		The amount of insurance shown on Page One.
+		WE may also replace the property with property of similar kind, quality and value.
+
+OUR PAYMENT METHODS FOR SPECIFIC TYPES OF LOSS
+	Hail
+	The amount WE’LL pay YOU for loss or damage from hails depends on the type of loss or damage it causes.
+		Hail can cause structural damage, which is the actual penetration of the exterior surface or the cracking or breaking of support materials. When this type of loss, or damage occurs, WE’LL pay YOU the cost of repairing or replacing the damaged portion of the property.
+		Hail often dents the exterior surface of a mobile home. Since there is no structural damage, this will in no way affect the utility of the mobile home. The amount WE pay for this will be the difference between the actual cash value of YOUR property immediately before the loss and its actual cash value immediately after the loss.
+	Pair and Sets
+	In case of loss to part of a pair, set, series of objects, pieces or panels, either interior or exterior, WE may:
+		Repair or replace any part to restore the pair or set to its value before the loss, or 
+		Pay the difference between actual cash value of the pair or set before and after the loss.
+		WE can’t guarantee the availability of parts or replacements. WE won’t be obligated to repair or replace, the entire pair, set or series of objects, piece or panel when a part is lost or damaged.
+	Tie-Downs
+		WE’LL pay the replacement cost or repair cost, whichever is less for loss or damage to YOUR mobile home tie-down anchoring system.
+	Stolen Property
+		Before a loss for stolen property is paid or the property is replaced. WE may return any stolen property to YOU at OUR expense with payment for any damage.
+	If, as a result of YOUR loss, WE pay YOU in cash or by replacement an amount equal to the actual cash value of YOUR property before the loss, at OUR option. WE have the right to take legal title to YOUR property.
+	OUR Payment Methods are subject to the deductible and amounts as shown on Page One or elsewhere in this policy for the specific type of loss involved.
+
+DEDUCTIBLE
+	Certain losses or damage are subject to a deductible amount as shown on Page One or elsewhere in this policy.
+	When YOUR loss is the deductible amount or less, YOU pay it all. When YOUR loss is more than the deductible shown, YOU pay the deductible amount and WE pay the rest up to the Amount of Insurance provided to YOU in this policy.
+	This policy may have different deductibles for different coverages. Only one deductible amount will be applied to a loss from one occurrence. If the deductible amounts are not equal, the highest deductible for the coverages involved in the loss will apply.
+
+PHYSICAL DAMAGE DOESN’T PROVIDE PAYMENT FOR:
+	Loss or damage due and confined to wear and tear, freezing, neglect or mechanical or electrical breakdown or failure, or manufacturer defect;
+	Loss or damage resulting from or increased by water backing up through sewers or drains or water below the surface of the ground;
+	Any loss or damage caused by enforcement of any governmental requirement regulating construction, confiscation, repair, demolition, sale, occupancy or relocation of YOUR mobile home;
+	Any Loss or damage if YOUR mobile home, adjacent structures, personal effects or premises are being used for any illegal trade or illegal business;
+	Loss or damage due and confined to leakage from rain, sleet or snow or its resulting damage whether or not wind driven;
+	Loss or damage if YOUR mobile home, adjacent structures, personal effects or premises are used exclusively for business or professional purposes;
+	Loss if YOU intentionally cause damage to or destruction of YOUR mobile home, adjacent structures or personal effects, or if YOU intentionally gave US materially false information with intent to deceive in order to obtain this policy or in YOUR presentation of claim;
+	Loss due to nuclear action which means nuclear reaction, radiation or radioactive contamination. Direct loss by fire resulting from nuclear action is insured.
+	Loss or damage due to war, hostile or war-like action in time of peace or war whether declared or not declared;
+	Loss or damage to tires and wheels, unless damaged by fire or stolen while attached to or from inside the mobile home; and
+	Loss by theft to personal effects if the mobile home is not lived in or is vacant for more than 30 consecutive days before the loss.
+
+
+LIABILITY
+
+Liability provides protection against accidents that happen to somebody else, but that YOU are legally responsible for, subject to all policy terms and conditions.
+WE’LL pay under Personal Liability Coverage for damages YOU become legally obligated to pay when the damages occur on YOUR mobile home premises or result from YOUR personal actions.
+WE’LL pay for certain medical expenses whether or not YOU are legally liable as described in Medical Payments To Others Coverage, subject to all policy terms and conditions.
+
+
+
+DEFINITIONS
+Bodily Injury means bodily injury, sickness, disease or death of any person, except YOU or any resident of YOUR mobile home;
+Property Damage means damage or destruction of property of others or damage or injury to it, including loss of its use.
+
+Premises means:
+	YOUR mobile home as long as it is not for rental, farm or business use. Included are premises used in connection with YOUR mobile home. Also included are adjacent sidewalks and drives to YOUR mobile home; vacant land other than farmland owned by or rented to YOU, including land on which a one or two family dwelling is being build for YOUR use; premises not owned by YOU but in which YOU temporarily live; or individual or family cemetery plots or burial vaults.
+
+PERSONAL LIABILITY COVERAGE
+	If a claim is made or a suit brought against YOU for damages because of Bodily Injury or Property Damage, as WE have described, WE will:
+		Pay up to OUR limit of Liability shown on Page One for the damages for which YOU are legally liable;
+		Provide a defense at OUR expense by attorneys of OUR choice. WE may make any investigations and settle any claims or suits that WE decide appropriate. OUR obligation to defend any claim or suit ends when the amount WE pay for damages resulting from the occurrence equals OUR Limit of Liability shown on Page One.
+
+MEDICAL PAYMENTS TO OTHERS COVERAGE
+	WE’LL pay for YOU up to OUR Limit of Liability shown on Page One the necessary medical expenses incurred or medically determined within one year from the date of an accident causing Bodily Injury. The accident must occur between the “From” and “To” dates shown on Page One. Medical expenses means reasonable charges for medical, surgical, XRay, dental, ambulance, hospital, professional nursing, recognized religious method of healing, prosthetic devices and funeral services. This coverage doesn’t apply to YOU or a resident of YOUR mobile home other than residence employees.
+		Medical Payments To Others Coverage applies only:
+		To a person on YOUR premises with YOUR permission;
+		To a person off of YOUR premises if the Bodily Injury:
+		Arises out of a condition in YOUR premises or the sidewalks and drives adjacent to YOUR premises;
+		Is caused by YOUR activities;
+		Is caused by a residence employee in the course of duties for YOU; or
+		Is caused by an animal owned by YOU or in YOUR care.
+	Personal Liability Coverage and Medical Payments To Others Coverage provides coverage only for:
+		Activities which are ordinarily incidental to non-business pursuits.
+
+WE PROVIDE THE FOLLOWING IN ADDITION TO THE LIMITS OF LIABILITY:
+
+CLAIM EXPENSE
+	For claim expenses WE pay:
+		Expenses incurred by US and costs taxed against 
+		YOU in any suit WE defend;
+		Premiums on bonds required in a suit defended by US, but not for bond amounts greater than the Limit of Liability for Personal Liability Coverage. WE are not obligated to apply for or furnish any bonds;
+		Expenses incurred by YOU at OUR request, including up to $25 a day actual loss of earnings, for assisting US in the investigation or defense of any claim or suit; and
+		Interest on the entire entered judgment until WE pay, formally offer, or deposit in Court that part of the judgment which doesn’t exceed the limit of OUR liability on that judgment.
+
+FIRST AID EXPENSES
+	WE’LL pay YOUR expenses for first aid to others at the scene of an accident caused by YOU. WE’LL not pay for first aid to YOU.
+
+DAMAGE TO PROPERTY OF OTHERS
+	WE’LL pay for Damage To Property of Others caused by YOU up to $250 per occurrence, subject to all policy terms and conditions.
+
+LIABILITY DOESN’T PROVIDE PAYMENT FOR
+	PERSONAL LIABILITY COVERAGE AND MEDICAL PAYMENTS TO OTHERS COVERAGE DOESN’T PAY FOR BODILY INJURY OR PROPERTY DAMAGE:
+		Arising out of the serving or furnishing of alcoholic beverages to any person;
+		Arising out of YOUR business pursuits;
+		Arising out of the rental or holding for rental of any premises owned by YOU intended for use as a residence for more than two roomers or boarders;
+		Arising out of the rendering or failing to render professional services;
+		Arising out of any premises owned or rented to YOU unless it is shown on Page One or a premium charge has been made;
+		Arising out of the ownership, maintenance, use, loading or unloading of;
+		Any motor vehicle licensed or not for road use, on or-off public roads except golf carts while used for golfing, riding lawn mowers or equipment usual and incidental to the maintenance of YOUR mobile home premises;
+		Aircraft;
+		Watercraft;
+		If the watercraft has inboard or inboard-out-board motor(s) exceeding 50 horsepower;
+		If it is a sailing vessel, with or without auxiliary power, 26 feet or more in overall length; or
+		If it is powered by one or more outboard motors with more than 25 combined total horsepower owned by YOU;
+	Caused directly or indirectly by war, hostile or war-like action in time of peace or war whether or not declared, riot or civil disorder; or which is expected or intended by YOU.
+
+PERSONAL LIABILITY COVERAGE DOESN’T PAY FOR BODILY INJURY OR PROPERTY DAMAGE FOR:
+	Liability assumed in any contract or agreement in connection with any business of YOURS;
+	Damage to property owned by YOU;
+	Damage to property rented to, occupied or used by YOU or in YOUR care except sudden and accidental damage from fire, explosion, smoke or smudge caused by YOU;
+	Bodily Injury to any person eligible to receive any benefits required to be provided by YOU under any workers’ compensation, non-occupational disability or occupational disease law; or
+	Bodily Injury or Property Damage if YOU are also insured by a nuclear energy liability policy whether or not its limits of liability have been exhausted.
+
+MEDICAL PAYMENTS TO OTHERS COVERAGE DOESN’T PAY FOR BODILY INJURY:
+	To a residence employee if Bodily Injury occurs off YOUR mobile home premises and doesn’t arise out of, or in the course of, the employment by YOU;
+	To any person eligible to receive any benefits required to be provided or voluntarily provided by any workers’ compensation, non-occupational disability or occupational disease law; or
+	From nuclear action meaning nuclear reaction, radiation or radioactive contamination.
+
+DAMAGE TO PROPERTY OF OTHERS DOESN’T PAY:
+	If the loss is insured in any PHYSICAL DAMAGE coverage in this policy;
+	If the loss is caused intentionally by a named insured over 12 years old;
+	For loss to property owned by, or rented to YOU, a tenant of YOURS or a resident of YOUR mobile home; or
+	If the loss arises from:
+		Business pursuits;
+		Any act or omission in connection with a premises owned, rented or controlled by YOU unless it is shown on Page One or a premium charge has been made; or
+		The ownership, maintenance or use of a motor vehicle, aircraft, or watercraft.
+
+
+GENERAL POLICY CONDITIONS
+
+
+These general conditions apply to YOUR policy.
+
+APPRAISALS
+	If settlement can’t be agreed to, then both YOU and WE have the right to select a competent and disinterested appraiser within 20 days from the date of disagreement. The appraisers will select an umpire. The appraisers will determine the amount of the loss. If they don’t agree, then each appraiser will submit his amount of the loss to the umpire. The agreement of any two will determine the amount of loss. YOU pay YOUR appraiser and WE pay OUR appraiser. YOU and WE share equally the expense of the umpire and all other expenses of the appraisals.
+
+AUTOMATIC REINSTATEMENT OF COVERAGE
+	Any damage to YOUR property will reduce the amount of coverage available by the amount of the damage. YOUR coverage will return to the Amount of Insurance shown on Page One upon completion of repairs or replacements.
+
+BANKRUPTCY
+	If YOU become bankrupt or insolvent WE will still be obligated by this policy.
+
+CANCELLATION OR NONRENEWAL
+	YOU can cancel YOUR policy by mailing to US a written notice telling US the future date cancellation is to be effective. If a lienholder is named on Page One, WE’LL mail written notice to the lienholder ten days prior to cancellation of the lienholder’s interest in this policy.
+	WE can cancel this policy for any reason during the first 60 days. WE can cancel this policy after the first 60 days only if YOU or YOUR representative:
+		Conceal, omit or misrepresent any material facts or circumstances, or
+		Make a false or fraudulent claim, or 
+		Have knowledge of any change that substantially increases the risk assumed by US without notifying US and paying any required premium for the increased risk, or 
+		Haven’t paid the premium.
+	WE’LL mail a cancellation notice to YOU at least 30 days (10 days if YOU haven’t paid the premium or if in the first 60 days of coverage) before this policy is cancelled.
+	WE’LL mail a cancellation notice to YOUR last address known to US. WE’LL also give the same notice to YOUR lienholder.
+	YOUR lienholder can cancel this policy if YOUR mobile home has been repossessed or the lienholder has otherwise acquired ownership of the mobile home. The lienholder may then, for the account of all parties at interest in this policy and upon surrender of its copy of the policy, cancel this policy. If there is any refund or premium due YOU, WE’LL mail it to YOU with YOUR cancellation notice or as soon as possible after WE mail the notice. If there is a lienholder, its interest will be recognized in any refund due.
+	WE agree to offer to renew YOUR policy unless WE mail YOU at least 45 days, but not more than 60 days before the “To” date shown on Page One, written notice of OUR intention not to renew this policy. With YOUR payment of the premium WE will renew this policy.
+	If YOU cancel this policy anytime within one year after the “From” date shown on Page One, 90% of the unearned premium will be returned to YOU. If YOU cancel this policy after the first year, YOUR unearned premium will be returned to YOU on a pro rate basis. If WE or the lienholder cancel this policy, the return premium will be calculated pro rate. All return premium will be subject to the “Minimum Earned Premium” shown on Page One of this policy. 
+	90% of the unearned premium means that WE keep premium for the period of time YOU were insured, plus a percentage charge to cover cancellation expenses. Pro rate cancellation means that WE keep premium only for the period of time YOU were insured.
+
+CHANGES IN YOUR POLICY
+	If any provision of this policy is in conflict with YOUR state’s or the Federal Government’s laws or regulations at the time YOUR policy is written, it is automatically changed to conform to them. WE’LL automatically give YOU the benefit of any extension or broadening of this policy, if the change doesn’t require additional premium.
+	When YOUR policy is renewed, continued or extended, WE will furnish YOU any form revisions applicable to YOUR coverage.
+	The only other way this policy can be changed is if WE change it in writing, which will be made a part of this policy. Any change in YOUR premium will be made at that time.
+
+LEGAL ACTION AGAINST US
+	YOU may not bring legal action against US concerning this policy unless YOU have fully complied with all of its terms.
+	Under the Liability Coverages no legal action may be brought against US until judgment against YOU has been finally determined after trial.
+	YOUR policy does not give anyone the right to make US a part of any action to determine YOUR liability.
+
+LIENHOLDER INTEREST
+	If YOU borrowed money to buy YOUR mobile home, the person or business that loaned YOU the money is called the lienholder. Lienholder means the person, firm, association, corporation or other legal entity named as the lienholder on Page One. The designation of a lienholder is considered to be an acknowledgment by YOU that the entity named has a legal interest in the mobile home due to an installment sales contract or other security agreement. YOUR lienholder may require YOU to name it on Page One as a separate insured party, for any insurable interest it may have.
+	When a lienholder is named on Page One, OUR Payment Method will recognize the lienholder’s interest in YOUR property. If WE elect to settle YOUR loss or damage in money, both YOUR name and YOUR lienholder’s will appear on OUR payment check. If YOU have paid off YOUR lienholder, please tell US so that the lienholder’s name may be removed from the policy.
+	If YOUR interest in the mobile home is terminated, OUR Payment Method will recognize only the lienholder’s interest. No change in title or ownership of YOUR mobile home or any negligent acts of YOURS will cancel the lienholder’s interest in this policy.
+	YOU or the lienholder must let US know of any change of ownership or any increase in hazard which comes to YOUR or the lienholder’s knowledge. If an increase in hazard requires an additional premium, YOU must pay the additional premium.
+	If YOU fail to pay any premium due for this policy, YOUR lienholder may be requested to pay that premium.
+	If YOU fail to give US proof of loss within the required 90 days, the lienholder is given an additional 30 days to notify US of the loss.
+
+LIMITS OF LIABILITY
+	The insuring of more than one person by this policy does not increase OUR Liability Limits or the Amount of Insurance.
+
+OUR RIGHT TO RECOVER FROM OTHERS
+	After WE have made payment under this policy, except for Medical Payments To Others, WE have the right to recover the payment from anyone who may be held responsible. YOU will be required to sign any papers and do whatever else is necessary to transfer this right to US.
+	Neither YOU nor anyone WE insure in this policy has the right to do anything to prejudice OUR right.
+
+OTHER INSURANCE
+	Occasionally other insurance pays YOU or pays for the loss or damage which is also insured by this policy. When this happens, the following rules apply:
+		If the other insurance isn’t provided by US, WE’LL pay only for OUR share of any coverage for any loss or damages in excess of any applicable deductibles. OUR share is determined by adding up the limits or amounts of all collectible insurance benefits and finding the percentage of the total which OUR limits or amount represents.
+		This policy is excess coverage for Comprehensive Personal Effects Coverage if there is other insurance coverage which will pay first. After the other policy has paid up to its limit, OUR policy will provide coverage up to its amount, but not exceeding the remainder of YOUR loss.
+
+LOCATION
+	YOUR policy provides coverage for the mobile home and adjacent structures anywhere in the United States or Canada. If YOU move YOUR mobile home, please let US know within 30 days. YOUR policy provides coverage for personal effects and liability anywhere in the world, subject to all terms and conditions of this policy.
+
+TRANSFER OF THIS POLICY
+	No interest in this policy can be transferred without OUR written consent. If YOU die, this policy will continue in force for the remainder of the time between the “From” and “To” dates shown on Page One. This policy will only continue for other members of YOUR family entitled to coverage at the time of YOUR death or for YOUR legal representative.
+WHAT TO DO WHEN YOU HAVE A LOSS
+	Any theft, robbery or burglary loss must be reported to the police within 24 hours after YOU discover the loss.
+	When YOU have a loss, YOU or someone on YOUR behalf must notify US at once. The quickest way is to phone YOUR agent or US.
+	When YOU notify YOUR agent or US, please give YOUR name, policy number, how the loss happened, including the extent of the damages or injuries, names of witnesses, and all other pertinent facts at the time YOU report the loss.
+	If WE need other information to investigate the loss, WE’LL ask YOU for it. WE may require this information in writing.
+	If YOU have a loss, YOU must protect YOUR mobile home from any further damage. If YOU fail to do so, any further damage won’t be recoverable by this policy. WE’LL pay any actual reasonable expenses for necessary emergency repairs incurred in protecting the mobile home, adjacent structures and personal effects from further loss if that loss is insured by this policy.
+	WE may require that YOU file with US a notarized statement of loss within 90 days after the loss or damage. YOU may be required to show US the damaged property and submit to examination under oath. YOU will be required to cooperate with US in OUR effort to investigate the accident or loss, settle any claims against YOU and defend YOU. If YOU fail to cooperate, WE have the right to deny YOU coverage in this policy.
+	If WE make a payment under Medical Payment To Others, this isn’t an admission of liability by YOU or US.
+	YOU, except at YOUR own cost, may not voluntarily make any payment, assume any obligation or incur any expenses other than First Aid Expenses or emergency repair.
+	When YOU have a loss that WE insure, WE’LL make settlement within 60 days after WE receive an acceptable proof of loss from YOU and the amount of loss is determined as provided in this policy.
+	This policy is signed at the Home Office of American Bankers Insurance Company of Florida, Miami, Florida by OUR authorized representatives. It’s countersigned on Page One by OUR authorized representative(s) if required.
+
+REQUIRED STATE CHANGES
+
+	ARIZONA EXCEPTION - If this policy is written in the State of Arizona, Fire Department Service provided for under YOUR additional coverages in this policy does not apply in Arizona.
+
+	FLORIDA
+	Additional Living Expenses Coverage - WE’LL pay reasonable additional expenses not exceeding an aggregate limit of 10% of the value of the mobile home described on Page One.
+
+	MARYLAND
+	Cancellation - Except for nonpayment of premium, notice of cancellation by US shall provide not less than 45 days written notice.
+
+	STATE OF MONTANA, CANCELLATION EXCEPTION - In compliance with Montana Law the policy to which this endorsement is attached is amended as follows:
+
+		“If the property insured is occupied by YOU as a domicile, WE will give YOU 30 days advance notice in writing in the event of non-renewal or cancellation of coverage.”
+
+	All other provisions for cancellation remain unchanged.
+
+	NEW MEXICO EXCEPTION - If this policy is written in the State of New Mexico, Fire Department Service provided for under YOUR additional coverages in this policy does not apply in New Mexico.
+
+	WYOMING
+	When YOU have a loss that WE insure, WE’LL make settlement within 45 days after WE receive an acceptable proof of loss from YOU and the amount of the loss is determined as provided in this policy.
+
+
+
+SECURED INTEREST PROTECTION ENDORSEMENT
+
+If YOU borrowed money to buy YOUR mobile home, YOUR lienholder and mobile home dealer needed some security for that loan. In most cases YOUR mobile home will be the security. In other words, the loan is secured by YOUR mobile home. YOUR lienholder and mobile home dealer have a secured interest in YOUR mobile home and may require that the Secured Interest Protection Endorsement be added to YOUR policy. Any additional premium may have to be paid by YOU.
+
+
+COLLISION OR UPSET
+WE’LL pay the lienholder or the mobile home dealer for direct and sudden accidental loss to the mobile home caused by collision while the mobile home is being moved from one place to another. Collision which damages only wheels, tires, axles and running gear isn’t covered.
+In each claim for loss or damage, $100 will be deducted from the amount of loss.
+
+ALTERATION
+WE’LL pay the lienholder or the mobile home dealer if the Named Insured caused deliberate damage to the mobile home or made substantial changes in its structure with the intention of reducing its value without permission of the lienholder or the mobile home dealer. Total Alteration results when the damage or change reduces the value of the mobile home so that the cost of repair plus the salvage value exceed the actual cash value of the mobile home before such damage or change. Damage resulting from neglect or omission to act, or from wear and tear or hard usage won’t be considered as alteration.
+In each claim for loss or damage, $100 will be deducted from the amount of the loss.
+
+CONVERSION
+WE’LL pay the lienholder or the mobile home dealer if they are unsuccessful in their efforts to recover possession of the mobile home or its missing parts due to the Named Insured’s transfer of ownership without permission of the lienholder or the mobile home dealer.
+In each claim for loss or damage, $100 will be deducted from the amount of the loss.
+
+CONCEALMENT
+WE’LL pay the lienholder or the mobile home dealer if they are unable to locate the mobile home or its missing parts within 120 days after WE receive all of the lienholder’s or mobile home dealer’s papers, documents and records regarding the loan as long as the Named Insured hasn’t made a loan payment to the lienholder or mobile home dealer during that 120 days. A police report must be filed for each loss contained in this paragraph.
+In each claim for loss or damage, $100 will be deducted from the amount of the loss.
+
+REPOSSESSION EXPENSE
+If the mobile home is repossessed by or on behalf of the lienholder or mobile home dealer, this coverage provides payment by US to the lienholder or mobile home dealer for an amount equal to the expense of transporting the mobile home from the place of repossession to the shortest of the following:
+	The place where it was sold by the lienholder or mobile home dealer, or
+	To the nearest business location of the lienholder or mobile home dealer.
+Repossession Expense applies only to the expense of returning the entire mobile home but not to the expense of returning only separate parts, equipment or accessories.
+In each claim for loss, $100 will be deducted from the amount of the loss.
+
+OUR PAYMENT METHODS
+The amount WE pay the lienholder or the mobile home dealer for loss covered by Secured Interest Protection will be the lowest of:
+	The cost without overhead or profit to the lienholder or the mobile home dealer for repairing or replacing the mobile home and parts with property of similar quality and value; or
+	The amount of interest of the lienholder or mobile home dealer in any Alteration, Conversion or Concealment loss, measured by the unpaid balance, not more than 60 days past due; less:
+		Unearned interest, insurance, finance and other carrying charges computed as of the date of claim, and also minus any penalties or other charges which may have been added to the loan after the loan was finalized; or
+		Replacement of the property with property of similar kind, quality and value; or
+		Actual cash value of the mobile home or of the missing parts immediately before the loss.
+	Repossession Expense is limited to: the rate per mile for transportation up to 70¢ per mile.
+	This is subject to a maximum payment of $600.
+
+DEDUCTIBLE
+If in one claim for loss or damage, Collision or Upset, Alteration, Conversion, Concealment or Repossession Expense is involved, a $100 deductible applies to each, but the total deductible from each such combination of losses shall not exceed $200.
+
+SECURED INTEREST PROTECTION DOESN’T PROVIDE COVERAGE:
+	If the loan transaction wasn’t entered into in accordance with normal and usual credit standards. WE don’t pay when the lien instrument, at the time of its execution, wasn’t legally enforceable and didn’t represent a bona fide security transaction entered into in good faith by both parties to secure the repayment of the amount of the total loan amount;
+	If at the date this coverage became effective, payment was more than 30 days past due under the lien instrument covering the mobile home;
+	For the gas bottles, fuel tanks, steps, skirting, beds, curtains, spreads, drapes, furniture or equipment. WE don’t pay for appliances that have worn out or have been discarded, even if replaced;
+	If the loss is caused by failure of anyone to maintain the mobile home, its parts and equipment in good working order;
+	Unless the Named Insured has defaulted on the loan and the mobile home has been repossessed.
+
+GENERAL CONDITIONS OF SECURED INTEREST PROTECTION
+	Other Insurance
+	If there is other collectible insurance for loss by Collision or Upset, the other insurance coverage pays first and Secured Interest Protection will pay next, but only if the entire loss isn’t covered by the other insurance.
+	Our Right to Recover from Others
+	After WE have made a Secured Interest Protection payment, WE give up the right to recover the payment from the lienholder or the mobile home dealer, except for fraudulent actions of the lienholder or mobile home dealer.
+	WE give up the right to recover payment from the Named Insured. In Kansas, Pennsylvania and New York WE don’t give up the right to recover payment from the Named Insured.
+	What to do When a Loss Occurs
+	The lienholder or mobile home dealer must tell US as soon as there is suspicion of or actual knowledge loss has occurred. If the mobile home has been repossessed. WE must be told within 30 days after repossession.
+	The lienholder or mobile home dealer must give US, as part of the notice of loss or potential loss, the following:
+		Inspection report prepared at the time of repossession describing the condition of the mobile home and a listing, in detail, of the parts which are missing;
+		Manufacturer’s invoice;
+		Any letters or other papers detailing their efforts to locate any item(s);
+		Retail sales contract;
+		Credit application;
+		Detailed description of damage and alterations;
+		All available evidence showing exactly how the mobile home was equipped and sold;
+		Summary of collection efforts;
+		Statement from the local law enforcement agency to which the loss was reported.
+	The lienholder or mobile home dealer must, at its own expense, use every reasonable effort, including litigation, until settlement of the loss: to
+		Secure, protect and preserve the mobile home from loss;
+		Locate the Named Insured, the mobile home and any missing parts;
+		Declare the loan in default;
+		Repossess the mobile home for which any claim is to be made;
+		Collect all amounts.
+	The lienholder or mobile home dealer must allow US to review and copy any other books, records and files that will assist US in settling a claim.
+	All losses must be promptly reported to the police.
+
+	The General Policy Condition of the Mobilowners Policy titled WHAT TO DO WHEN YOU HAVE A LOSS doesn’t apply to this endorsement.
+
+	The day WE receive all the required information will be the effective date of claim and all computations will be made as of that day.
+
+	The General Policy Conditions of the Mobilowner Policy apply To The Secured Interest Protection Endorsement unless WE have already changed it in writing.
+
+	Named Insured means the person or persons named on Page One and is not intended necessarily to acknowledge legal title or ownership of the insured property.
+
+
+
+
+
+
+
+IMPORTANT DOLLAR-SAVING REMINDERS
+
+	When trading YOUR mobile home always specify that YOUR policy be endorsed to cover the new mobile home YOU’RE purchasing.
+
+	Ownership in YOUR policy can be transferred to whomever YOU sell YOUR mobile home. Merely send US the name and address of the new owner with the request over YOUR signature that YOUR policy be transferred.
+
+
+
+
+AB4080PC-1080
+
+
+AB4080PC-1080			AB4080Z.DOC-0599
+
+
+AB4080PC-1080	Page 1		AB4080Z.DOC-0599
+
+
+AB4080PC-1080		Page 2		AB4080Z.DOC-0599
+
+
+AB4080PC-1080		Page 11		AB4080Z.DOC-0599
+
+</pre></article><article class="doc"><h2>MH4755.txt</h2><div class="meta"><a class="btn" href="/mhpoly/library/MH4755.txt" download>Download</a> <span class="note">Source: <code>/mhpoly/library/MH4755.txt</code></span></div><pre>	A FARM MUTUAL COMPANY
+
+(Managed by American Bankers General Agency, Inc.)
+(Administrative Offices:  11222 Quail Roost Drive, Miami, FL 33157)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SPECIALTY HOMEOWNERS PROGRAM
+
+
+
+
+
+
+
+WE WELCOME YOU AS A POLICYHOLDER OF RANCHERS AND FARMERS MUTUAL INSURANCE COMPANY.
+
+
+RANCHERS AND FARMERS MUTUAL INSURANCE COMPANY 
+SPECIALTY HOMEOWNERS PROGRAM
+TABLE OF CONTENTS
+
+	Page
+
+Insuring Agreement 	 1
+Definitions	 1
+Coverages	 2-4
+	Comprehensive Dwelling Coverage	 2
+	Comprehensive Adjacent Structure Coverage	 2
+	Comprehensive Personal Effects Coverage	 2
+	Personal Effects Does Not Include	 2
+	Extension of Personal Effects Coverage	 2
+	Personal Effects Categories Subject to Limited Coverage	 3
+
+YOUR Additional Coverages	 3-4
+	Additional Living Expense	 3
+	Debris Removal Coverage	 3
+	Emergency Removal Service Coverage	 3
+	Fire Department Service Coverage	 3
+	Antenna Coverage	 3
+	Trees, Shrubs, Plants and Lawn Coverage	 4
+	Tie-Down Equipment Coverage	 4
+Deductible	 	4
+Exclusions	 	4 -5
+
+Conditions		 5-9
+	Our Payment Methods	 6
+	What YOU Must Do in Case of Loss	 6
+	What WE Must Do in Case of Loss	 6
+	Other Insurance	6-7
+	Appraisals	 7
+	Automatic Reinstatement of Coverage	 7
+	Bankruptcy	 7
+	Cancellation	 7-8
+	Refusal to Renew	8
+	Changes in YOUR Policy	 8
+	Action Against US 	 8
+	Lienholder s Interest	 8
+	OUR Right to Recover from Others	 9
+	Location	 9
+	Transfer of This Policy	 9
+	Residential Community Property Clause	9
+
+Supplemental Conditions	 9
+
+
+INSURING AGREEMENT
+
+WE will provide the insurance described in this policy in return for the paid premium and in compliance with all applicable provisions of this policy.
+
+IF THIS POLICY WAS ISSUED AT THE LIENHOLDER S REQUEST, THIS POLICY WILL BE NULL AND VOID AT SUCH TIME AS ANOTHER POLICY BECOMES EFFECTIVE TO COVER THE DESCRIBED PROPERTY.
+
+WE provide insurance only for covered losses which occur during the policy period and for coverages shown on the Declarations Page.
+
+DEFINITIONS
+
+ YOU ,  YOUR ,  YOURS  means the person named on the Declarations Page and that person s husband or wife who lives in the same dwelling as the named insured.
+
+ WE ,  US ,  OUR , always means Ranchers and Farmers Mutual Insurance Company, Beaumont, Texas.
+
+ Occurrence  means an accident, including continuous or repeated exposure to substantially similar conditions.
+
+ Business  means:
+1.	any full or part time trade, profession or occupation;
+2.	the rental or holding for rental of any premises by an insured person;
+3.	occasional rental or holding for rental of the residence premises for use as a dwelling;
+4.	rental or holding for rental of part of the residence premises as a private garage, office, school or studio;
+5.	providing home day care services to a person(s) other than insureds and receiving monetary or other compensation for such services.
+
+ Business Day  means a day other than a Saturday, Sunday or holiday recognized by the State of Texas.
+
+ Insured Person  means YOU and any dependent person under the age of 21 who is a resident of YOUR household.
+
+ Insured premises  means the residence premises described on the Declarations Page.
+
+ Residence employee  means an employee of YOURS whose duties are in connection with the maintenance or use of the residence premises, or who performs similar duties not in connection with any type of business.
+
+ Actual Cash Value  means the amount it would cost to repair or replace damaged property with material of like kind and quality, less allowance for physical deterioration and depreciation, including obsolescence.
+
+ Theft  means the fraudulent taking of tangible personal property belonging to another, from his possession without consent, with the intent to deprive the owner of the value of the same.
+
+ Burglary  means the breaking and entering the residence of another with intent to commit a felony. There must be visible signs of forced entry for a loss to be caused by burglary.
+
+ Total Loss  means that the cost to repair the damage to the dwelling plus the salvage value exceeds the actual cash value of the dwelling prior to a loss.
+
+ In Transit  means the period of time during which the leveling jacks or blocks are removed and all utilities are disconnected for the purpose of transporting the dwelling from one location to another. This applies whether or not the dwelling is momentarily in motion and whether on a public roadway or otherwise. The dwelling will not be considered in transit if it is moved because it is threatened by a loss covered by this policy.
+
+ Physical Damage  means damage to property YOU own. WE will identify the coverage WE provide for YOUR dwelling, adjacent structures and personal effects throughout this policy.
+
+ Comprehensive Coverage  means WE will pay for direct, sudden and accidental loss of or for direct, sudden and accidental damage to YOUR dwelling, adjacent structures and personal effects, except for what is excluded.
+
+ Dwelling  means the home described on the Declarations Page and any structures permanently attached to the home.  It does not include any unattached structures, nor any structures connected by only a fence, utility line or similar connection, nor the land on which the home is located.  
+
+
+
+PHYSICAL DAMAGE COVERAGES
+
+COMPREHENSIVE DWELLING COVERAGE
+
+WE will pay up to the amount shown on the Declarations Page for direct, sudden and accidental loss of or for direct, sudden and accidental damage to YOUR dwelling, as described on the Declarations Page. This includes its original parts, equipment and accessories (i.e., central air conditioning units and skirting), listed in the certificate of origin, bill of sale, manufacturers invoice or on the sales invoice given to YOU at the time YOU purchased YOUR dwelling.
+
+WE will also pay for direct, sudden and accidental loss of or for direct, sudden and accidental damage to structures which are attached to the dwelling. Attached structures are classified as added rooms, carport structures, garage structures, and awnings or porch roof covers. WE will pay for these structures in the event of a covered loss if added after YOU purchased the home, provided YOU told US about them.
+
+Comprehensive Dwelling Coverage does not apply while the dwelling is in transit.
+
+COMPREHENSIVE ADJACENT STRUCTURES COVERAGE
+
+WE will pay up to the amount shown on the Declarations Page for direct, sudden and accidental loss of or for direct, sudden and accidental damage to adjacent structures which YOU own and which are located on YOUR  insured premises . Adjacent structures are classified as structures which are not attached to the dwelling, including structures connected to the dwelling by only a fence, utility line or similar connection. This includes garages, wells and well pumps, carports, above-ground swimming pools and satellite dishes, provided YOU paid an additional premium for these coverages.
+
+Adjacent structures coverage does not include fences, barns used for livestock, TV antennas, septic tanks, or in-ground swimming pools.
+
+Comprehensive Adjacent Structures Coverage does not apply while the adjacent structures are in transit.
+
+COMPREHENSIVE PERSONAL EFFECTS COVERAGE
+
+WE will pay up to the amount shown on the Declarations Page for direct, sudden and accidental loss of or for direct, sudden and accidental damage to personal effects YOU own and which are usual and incidental to the use of YOUR dwelling as a dwelling. These personal effects must be located in YOUR dwelling or a fully enclosed adjacent structure located on YOUR premises.
+
+A loss due to mysterious disappearance is not covered.
+
+Personal Effects does not include:
+1.	Any motor vehicle, licensed or not, for use on or off public roads, including motor vehicle parts. WE will provide coverage for golf carts while used for golfing and for lawn mowers usual and incidental to the maintenance of YOUR  insured premises ;
+2.	YOUR animals, boats, aircraft, travel trailer, recreational vehicle, property of roomers or boarders, boat motors and money or securities;
+3.	Any device or instrument for the recording, reproduction or recording and reproduction of sound which could be operated by power from the electrical system of a motor vehicle, boat or aircraft; this includes radar detectors, CD players and CB radios;
+4.	Portable telephones;
+5.	Any item listed or separately insured by any other insurance;
+6.	Any item not owned by YOU;
+7.	Any item listed or insured under Comprehensive Adjacent Structures Coverage;
+8.	Any item owned by a resident of the household over the age of 21 other than those owned by the named insured shown on the Declarations Page.
+
+EXTENSION OF PERSONAL EFFECTS COVERAGE
+
+WE will also pay a limited amount for YOUR personal effects located outside YOUR dwelling, outside a fully enclosed adjacent structure or located off YOUR premises. This includes property while in any bank, trust or safe deposit company, public warehouse or occupied dwelling not owned or occupied by or rented by YOU where the property has been placed for safe keeping. WE will pay up to ten (10%) percent of the amount of Comprehensive Personal Effects coverage for loss or damage caused by fire, lightning, windstorm, earthquake, landslide or burglary. There must be visible signs of forced entry for a loss to be caused by burglary.
+
+The limited coverage for special personal effects categories applies.
+
+
+
+
+PERSONAL EFFECTS CATEGORIES SUBJECT TO LIMITED COVERAGE
+
+There is a special limit for the following Personal Effects categories:
+
+	
+Limit of Insurance
+
+Personal Effects Group
+$250
+guns and their equipment
+    $1,000
+jewelry, watches, precious and semi-precious stones, art, ceramics, china, antiques, and heirlooms
+$250
+stamp collections
+$250
+coin collections
+$250
+furs
+$250
+collectibles (i.e., baseball cards, porcelain collections, etc.)
+$250
+musical instruments
+$250
+video game decks and game cartridges
+$250
+gold, silver bullion
+$500
+sporting equipment
+$500
+cameras and their equipment 
+   $1,000
+computer and electronic equipment 
+$500
+power and hand tools
+$750
+audio or video recording devices and equipment, records, stereo equipment, tapes or CD s
+	
+
+WE will only pay for these categories in the event of loss caused by fire, lightning, earthquake, landslide, windstorm, robbery or burglary. There must be visible signs of forced entry for a loss to be caused by burglary.
+
+WE will pay the indicated amount for each of these categories, but no more than $2,500 maximum for all losses from one occurrence.
+
+YOUR ADDITIONAL COVERAGES
+
+When YOU buy Comprehensive Dwelling Coverage, WE automatically include the following additional coverages. WE will pay for these losses with no deductible.
+
+ADDITIONAL LIVING EXPENSE COVERAGE
+
+WE will pay the actual cost up to 10% of the amount of Comprehensive Dwelling coverage for reasonable Additional Living Expenses YOU pay when YOU cannot live in YOUR dwelling because it is damaged or destroyed by a covered peril. OUR payment ends when YOUR dwelling is repaired or replaced or seven days after WE have offered to make a reasonable settlement, whichever is less. WE will need paid receipts to verify YOUR reasonable additional living expenses incurred in addition to YOUR normal living expenses.
+
+DEBRIS REMOVAL COVERAGE
+
+WE will pay for expenses YOU incur when YOU remove debris of covered property following a loss covered under this policy. WE will pay the actual cost of the debris removal up to 1% of the amount of the Comprehensive Dwelling Coverage. This does not apply to removal of debris which would be considered normal maintenance.
+
+EMERGENCY REMOVAL SERVICE COVERAGE
+
+WE will pay when YOUR dwelling must be moved because it is threatened by a loss covered by this policy. The amount of coverage will be the actual moving cost up to $500 if YOUR dwelling can be removed in one section, or up to $1,000 for two or more sections.
+
+FIRE DEPARTMENT SERVICE COVERAGE
+
+WE will pay when the fire department is called because of a fire in YOUR dwelling or because of a fire endangering YOUR dwelling. WE will pay the actual fire department charge up to $250.
+
+ANTENNA COVERAGE
+
+WE will pay the actual cost up to $100 for loss of or damage to YOUR outside radio or TV antennas located on YOUR  insured premises . WE will pay for losses caused by fire, lightning, earthquake, landslide and windstorm. This coverage does not cover satellite dishes, which are considered adjacent structures.
+
+TREES, SHRUBS, PLANTS AND LAWN COVERAGE
+
+WE will pay for loss or damage to YOUR trees, shrubs, plants and lawn caused by fire, lightning, explosion, riot or civil commotion, aircraft, vandalism, malicious mischief, or motor vehicles not owned or operated by YOU. This coverages does not apply to any other type of landscaping materials such as gravel or timber, nor does it apply to damage caused by wind.
+
+Coverage is the actual cost up to $25 for any one plant or shrub, the actual cost up to $100 for the lawn or one tree, with a maximum combined payment of $200 for each occurrence. WE do not insure property grown for business purposes.
+
+TIE-DOWN EQUIPMENT COVERAGE
+
+WE will pay for damage to YOUR dwelling tie-down anchoring systems. This does not include loss or damage from rust, corrosion or faulty installation.
+
+DEDUCTIBLE
+
+Most losses and damages are subject to a deductible amount as shown on the Declarations Page or elsewhere in this policy.
+
+When YOUR loss is the deductible amount or less, YOU pay it all. When YOUR loss is more than the deductible shown, YOU pay the deductible amount and WE pay the balance of the loss up to the Amount of Insurance provided to YOU in this policy subject to all terms and conditions.
+
+This policy may have different deductibles for different coverages. Only one deductible amount will be applied to a loss from one occurrence. If the deductible amounts are not equal, the highest deductible involved in the loss will apply.
+
+EXCLUSIONS
+
+WE will not provide payment for loss or damage:
+1.	Due and confined to wear and tear, freezing, neglect or mechanical, structural, or electrical breakdown or failure, or manufacturer defect.
+2.	Caused by continuous or repeated seepage of water or steam from within a plumbing, heating or air conditioning system or from within a household appliance which occurs over a period of time.
+3.	Caused directly or indirectly by water, meaning:
+	a.	flood, surface water, waves, tidal water, overflow of a body of water, or spray from any of these, whether or not driven by wind;
+	b.	water which backs up through sewers or drains;
+	c.	water below the surface of the ground, including water which exerts pressure on or seeps or leaks through a building, sidewalk, driveway, foundation, swimming pool, or other structures.
+	Direct loss by fire, explosion or theft resulting from water damage is covered.
+4.	Caused by enforcement of any governmental requirement regulating construction, confiscation, repair, demolition, sale, occupancy or relocation of YOUR dwelling.
+5.	If YOUR dwelling, adjacent structures, personal effects or premises are being used for any illegal trade or illegal business.
+6.	Due and confined to leakage from rain, sleet or snow or its resulting damage whether or not wind driven. This includes roof leakage, unless an opening is caused by a covered peril.
+7.	If YOUR dwelling, adjacent structures, personal effects or premises are used in any way or at any time for business or professional purposes.
+8.	To personal effects used in or pertaining to business pursuits.
+9.	Caused by birds, rodents, insects or animals.
+10.	Due to settling, cracking, shrinking, earth movement, bulging or expansion of pavements, patios, foundations, of YOUR dwelling or any of its parts.
+11.	If intentionally caused by YOU to YOUR dwelling, adjacent structures or personal effects, or if YOU intentionally gave US materially false information with intent to deceive in order to obtain this policy or in YOUR presentation of claim. This includes conversion and concealment by YOU.
+12.	Due to nuclear action which means nuclear reaction, radiation or radioactive contamination. Direct loss by fire resulting from nuclear action is insured.
+13.	Due to war, hostile or warlike action in time of peace or war whether declared or not declared.
+14.	To tires, wheels and axles, unless damaged by fire while attached to YOUR dwelling or stolen from inside an enclosed adjacent structure.
+15.	By theft or burglary of personal effects if the dwelling is not lived in or is vacant for more than 30 consecutive days before the loss.
+16.	By vandalism to the dwelling if the dwelling is not lived in or is vacant for more than 30 consecutive days before the loss.
+17.	Caused by tenants.
+18.	Due to latent defects; marring; deterioration; vermin or inherent vice; rust; mold; wet or dry rot; contamination; smoke from agricultural smudging or industrial operations.
+19.	Caused by collision or upset while the dwelling is in transit.
+
+CONDITIONS
+
+OUR PAYMENT METHODS
+
+The amount WE pay for loss of, or damage to YOUR dwelling, adjacent structures and personal effects will be the lowest of:
+
+1.	The difference between the actual cash value of YOUR property immediately before the loss and its actual cash value immediately after the loss; or
+2.	The cost of repairing the damage; or
+3.	The actual cash value (as defined in this policy) of YOUR property immediately preceding the loss; or
+4.	The cost of replacing YOUR property; or
+5.	The amount of insurance shown on the Declarations Page.
+
+WE may elect to replace the property with property of similar kind, quality and value.
+
+Hail
+
+The amount WE will pay YOU for loss or damage from hail depends on the type of loss or damage it causes.
+
+1.	Hail can cause structural damage, which is the actual penetration of the exterior surface or the cracking or breaking of support materials. When this type of loss, or damage occurs, WE will pay YOU the cost of repairing or replacing the damaged portion of the property.
+
+2.	Hail often dents the exterior surface of a dwelling. Since there is no structural damage, this will in no way affect the utility of the dwelling. The amount WE pay for this will be the difference between the actual cash value of YOUR property immediately before the loss and its actual cash value immediately after the loss.
+
+	YOU may choose to repair the damage. Repairs must be completed and a claim must be submitted within 90 days of the loss. Payment will be made to YOU for the amount of the repair less any payment made for the actual cash value difference before and after the loss. When a lienholder is named on the Declarations Page, OUR payment method will recognize the lienholder s interest in YOUR property. Both YOUR name and YOUR lienholder s name will appear on OUR payment check.
+
+Pair and Sets
+
+In case of loss to part of a pair, set, series of objects, pieces or panels, either interior or exterior, WE may:
+1.	Repair or replace any part to restore the pair or set to its value before the loss; or
+2.	Pay the difference between actual cash value of the pair or set before and after the loss.
+
+WE cannot guarantee the availability of parts or replacements. WE will not be obligated to repair or replace, the entire pair, set or series of objects, piece or panel when a part is lost or damaged. Matching existing or adjacent part, piece or panel will be attempted but not required.
+
+Tie-Downs
+
+WE will pay the replacement cost or repair cost, whichever is less, for loss or damage to YOUR dwelling tie-down anchoring system.
+
+Stolen Property
+
+Before a loss for stolen property is paid and the property is replaced, WE may return any stolen property to YOU at OUR expense with a payment for any damage.
+
+If, as a result of YOUR loss, WE pay YOU in cash or by replacement an amount equal to the actual cash value of YOUR property before the loss, WE have the right to take legal title to YOUR property at OUR option.
+
+Total Loss
+
+If as a result of YOUR loss WE pay YOU in cash or by replacement an amount equal to the actual cash value of YOUR property before the loss, WE have the right to take legal title to YOUR property at OUR option.
+
+OUR Payment Methods are subject to the deductible and amounts as shown on the Declarations Page or elsewhere in this policy for the specific type of loss involved.
+
+WHAT YOU MUST DO IN CASE OF LOSS
+
+In case a covered loss occurs, the insured person must perform the following duties:
+1.	Notify US at once but no later than 90 days after the loss unless extended by US in writing. The quickest way is to phone YOUR agent or US. We will require:
+	a.	YOUR name and policy number;
+	b.	The time, place and circumstances of the loss;
+	c.	The names and addresses of witnesses; 
+2.	Send US promptly any legal papers received relating to any claim;
+3.	Cooperate with US and assist US in any matter relating to a claim;
+4.	We may require that YOU file with US a notarized statement of loss within 90 days after the loss or damage. YOU may be required to exhibit the damaged property as often as is reasonably required and submit to examination under oath. YOU will be required to cooperate with US in OUR effort to investigate the loss. If YOU fail to cooperate, WE have the right to deny YOU coverage in this policy;
+5.	Any theft, robbery, burglary or vandalism loss must be reported to the police within 24 hours after YOU discover the loss. The police report must include a list of all stolen items. YOU must submit a copy of the police report when filing a claim.
+6.	If YOU have a loss, YOU must protect YOUR dwelling from any further damage. If YOU fail to do so, any further damages will not be recoverable by this policy. WE will pay any actual reasonable expenses for necessary emergency repairs incurred in protecting the dwelling, adjacent structures and personal effects from further loss if that loss is insured by this policy;
+7.	YOU must provide reasonable documentation to support ownership of personal effects when reporting theft, burglary or robbery losses.
+
+WHAT WE MUST DO IN CASE OF LOSS
+
+1.	Within 15 days after WE receive YOUR written notice of claim, WE will:
+	a.	Acknowledge receipt of the claim.
+		If WE do not acknowledge the claim in writing, WE will keep a record of the date, method and content of acknowledgment.
+	b.	Begin any investigation of the claim.
+	c.	Specify the information YOU must provide in accordance with the Conditions and Provisions of this policy.
+
+	WE may request more information, if additional information is necessary during the investigation of the claim.
+
+2.	After WE receive the information We requested, WE will notify YOU in writing whether the claim will be paid or has been denied or whether WE need more information:
+	a.	Within 15 business days; or
+	b.	Within 30 days if WE have reason to believe the loss resulted from arson.
+
+3.	If WE did not approve payment of YOUR claim or require more time for processing YOUR claim, WE must:
+	a.	Give the reasons for denying YOUR claim; or
+	b.	Give YOU reasons why WE require more time to process YOUR claim. But, WE must either approve or deny YOUR claim within 45 days after OUR request for more time.
+
+4.	In the event of a weather-related catastrophe or major natural disaster, as defined by the Texas Department of Insurance, the claim-handling deadlines are extended for an additional 15 days.
+
+5.	Loss Payment:
+	a.	If WE notify YOU that WE will pay YOUR claim, or part of your claim, WE must pay within 5 business days after WE notify YOU.
+	b.	If payment of YOUR claim or part of YOUR claim required action on YOUR part, WE must pay within 5 business days after the date YOU have taken action.
+
+OTHER INSURANCE
+
+If this is a voluntary policy and there is other coverage at the time of a loss, WE will pay only OUR share of any coverage for any loss or damages in excess of any applicable deductibles.
+
+OUR share is determined by adding up the limits or amounts of all collectible insurance benefits and finding the percentage of the total which OUR limits or amount represents.
+
+This policy is excess coverage for Comprehensive Personal Effects Coverage if there is other insurance coverage which will pay first. After the other policy has paid up to its limit, OUR policy will provide coverage up to its amount, but not exceeding the remainder of YOUR loss.
+
+If this policy was issued at the lienholder s request, this policy will be null and void at such time as another policy becomes effective to cover the described property.
+
+APPRAISALS
+
+If settlement cannot be agreed to, then both YOU and WE will select a competent and disinterested appraiser within 20 days from the date of disagreement. The appraisers will select an umpire. An umpire must be chosen by the appraisers within 15 days of assignment and agreed to by both appraisers or a court appointed umpire will be chosen. The appraisers will determine the amount of the loss. If they do not agree, then each appraiser will submit the differences to the umpire. The agreement of any two will determine the amounts of loss. YOU pay YOUR appraiser and WE pay OUR appraiser. YOU and WE share equally the expense of the umpire and all other expenses of the appraisals.
+
+AUTOMATIC REINSTATEMENT OF COVERAGE
+
+Any damage to YOUR property will reduce the amount of coverage available by the amount of the damage. YOUR coverage will return to the Amount of Insurance shown on the Declarations Page upon completion of repairs or replacements.
+
+BANKRUPTCY
+
+If YOU become bankrupt or insolvent, WE will still be obligated by this policy.
+
+CANCELLATION 
+
+1.	YOU may cancel this policy at any time by notifying US of the date cancellation is to take effect. WE will send YOU any refund due when the policy is returned to US.
+2.	WE may cancel this policy at any time for the reasons stated in this condition by mailing YOU notice in writing of the date cancellation takes effect.
+	a.	If this policy has been in effect for less than 60 days and is not a renewal policy, WE may not cancel this policy unless:
+		(1)	WE identify a condition that:
+			(a)	Creates an increased risk of hazard;
+		(b)	Was not disclosed in the application for insurance coverage; and
+			(c)	Is not the subject of a prior claim;
+		(2)	Before the effective date of the policy WE do not accept a copy of a required inspection report that:
+(a)	Was completed by an inspector licensed by the Texas Real Estate Commission or who is otherwise authorized to perform inspections; and
+(b)	Is dated not earlier than the 90th day before the effective date of the policy.
+	An inspection report is deemed accepted unless WE reject it before the 11th day after the date we receive it;
+(3)	YOU do not pay the premium or any portion of the premium due;
+		(4)	The Texas Department of Insurance determines that continuation of the policy would violate the Texas Insurance Code or any other laws governing the business of insurance in this state;
+		(5)	YOU submit a fraudulent claim; or
+(6) There is an increase in the hazard covered by this policy that is within YOUR control and that would produce an increase in the premium rate of this policy.
+	The effective date of cancellation cannot be before:
+		(1)	The 10th day after WE mail notice if WE cancel for reasons (3), (4), (5), or (6) above.
+		(2)	The 30th day after WE mail notice if WE cancel for any other reason.
+	b.	If this policy has been in effect 60 days or more, or at any time if it is a renewal policy, WE may not cancel this policy unless:
+		(1)	YOU do not pay the premium or any portion of the premium due.
+	(2)	The Texas Department of Insurance determines that continuation of the policy would violate the Texas Insurance Code or any other laws governing the business of insurance in this state.
+		(3)	YOU submit a fraudulent claim.
+(4)	There is an increase in the hazard covered by this policy that is within YOUR control and that would produce an increase in the premium rate of this policy.
+	The effective date of cancellation cannot be before the 10th day after WE mail the notice. OUR notice of cancellation must state 	the reason for cancellation.
+3.	If WE cancel, OUR notice to YOU will state that this refund is not included with the notice, it will be returned on demand.
+4.	WE may not cancel this policy solely because YOU are an elected official
+
+REFUSAL TO RENEW
+
+1.	WE may not refuse to renew this policy because of claims for losses resulting from natural causes.
+2.	WE may not refuse to renew this policy solely because YOU are an elected official.
+	3.	WE may refuse to renew this policy if YOU have filed three or more claims under the policy in any three year period that do not result from natural causes.
+
+	If YOU have filed two claims in a period of less than three years, WE may notify you in writing, that if YOU file a third claim during the three-year period, WE may refuse to renew this policy by providing YOU proper notice of OUR refusal to renew as provided in 4. below. If WE do not notify YOU after the second claim, WE may not refuse to renew this policy because of losses. 
+	A claim does not include a claim that is filed but is not paid or payable under the policy.
+	
+4.	If WE refuse to renew this policy, WE must deliver to YOU, or mail to YOU at your mailing address shown on the declarations page and any mortgagee named on the declarations page, written notice of OUR refusal to renew not later than the 30th day before the date on which this policy expires. Proof of mailing will be sufficient proof of notice. If WE fail to give you proper notice of OUR decision not to renew, YOU may require US to renew the policy.
+
+CHANGES IN YOUR POLICY
+
+If any provision of this policy is in conflict with YOUR State s or the Federal Government s laws or regulations at the time YOUR policy is written, it is automatically changed to conform to them. WE will automatically give YOU the benefit of any extension or broadening of this policy, if the change does not require additional premium.
+
+When YOUR policy is renewed, continued or extended, WE will furnish YOU any form revisions applicable to YOUR coverage.
+
+The only other way this policy can be changed is if WE change it in writing, which will be made a part of this policy. Any change in YOUR premium will be made at that time.
+
+ACTION AGAINST US
+
+No action shall apply against US unless:
+
+1. there has been full compliance with all the terms of this policy ; and
+2. the action is brought within 2 years from the date when YOU discovered the loss. 
+
+LIENHOLDER S INTEREST
+
+If YOU borrowed money to buy YOUR dwelling, the person, firm or association that loaned YOU the money has a secured interest in YOUR dwelling.
+
+YOUR lienholder will require to be named on the Declarations Page as a separate insured party, for any insurable interest it may have.
+
+When a lienholder is named on the Declarations Page, OUR Payment Method will recognize the lienholder s interest in YOUR property. If WE elect to settle YOUR loss or damage in money, both YOUR name and YOUR lienholder s will appear on OUR payment check. The check will be mailed to YOUR lienholder. If YOU have paid off YOUR lienholder, please tell US so that the lienholder s name may be removed from the policy. WE will need proof of pay-off.
+
+If YOUR interest in the dwelling is terminated, OUR Payment Method will recognize only the lienholder s interest. No change in title or ownership of YOUR dwelling will cancel the lienholder s interest in this policy.
+
+YOU or the lienholder must let US know of any change of ownership or any increase in hazard which comes to YOUR or the lienholder s knowledge. If an increase in hazard requires an additional premium, YOU must pay the additional premium.
+
+If YOU fail to pay any premium due this policy, YOUR lienholder may be requested to pay that premium.
+
+If YOU fail to give US proof of loss within the required 90 days, the lienholder is given an additional 30 days to notify US of the loss.
+
+OUR RIGHT TO RECOVER FROM OTHERS
+
+After WE have made payment under this policy, WE have the right to recover the payment from anyone who may be held responsible. YOU will be required to sign any papers and do whatever is necessary to transfer this right to US.
+
+Neither YOU nor anyone WE insure in this policy has the right to do anything to prejudice OUR rights.
+
+LOCATION
+
+YOUR policy provides coverage for the dwelling and adjacent structures anywhere in the United States. YOUR policy provides coverage for personal effects anywhere in the world, subject to all terms and conditions of the policy. There is no coverage under this policy while YOUR dwelling is in transit between permanent locations. Coverage restarts once YOUR dwelling is properly blocked, leveled and hooked up to utilities. YOU must provide US with YOUR new address if YOU move YOUR dwelling.
+
+TRANSFER OF THIS POLICY
+
+Interest in this policy may not be transferred without OUR written consent. If the policyholder named on the Declarations Page or the spouse of the policyholder residing in the same household dies, the policy will cover:
+
+1.	Any surviving member of the deceased s household who was covered under this policy at the time of death;
+2.	The legal representative of the deceased person while acting within the scope of duties of a legal representative; and
+3.	Any person having proper custody of the insured property until a legal representative is appointed.
+
+RESIDENTIAL COMMUNITY PROPERTY CLAUSE
+
+This policy, subject to all other terms and conditions, when covering residential community property, as defined by state law, shall remain in force and effect as to the interest of each spouse covered, irrespective of divorce or change of ownership between the spouses unless excluded by endorsement attached to this policy until the expiration of the policy or until cancelled in accordance with the terms and conditions of this policy.
+
+SUPPLEMENTAL CONDITIONS
+
+Ranchers and Farmers Mutual Insurance Company is licensed to operate under Chapter 911, Texas Insurance Code, and such statutes shall apply to and form a part of this policy the same as if written or printed upon, attached or appended hereto.
+
+This policy is issued subject to the Articles of Incorporation and Bylaws of Company as they are now written and in effect or may hereafter be amended. The policyholder by his acceptance of this policy and the coverage and benefits thereof, hereby agrees to the foregoing condition.
+
+The policyholder is notified that by virtue of this policy the policyholder is a member of the Ranchers and Farmers Mutual Insurance Company, and is entitled, and is lawfully provided in the Articles of Incorporation and Bylaws to one vote in person for the annual policyholder s meeting as prescribed in the Bylaws, Article VII, to be held on the second Monday of December, or in any or all other meetings of said Company. Each member is entitled to only one vote regardless of the number of policies owned.
+
+In Witness Whereof, the Company has caused this policy to be executed and attested, but this policy shall not be valid unless countersigned on the Declarations page by a duly authorized agent of the Company.
+
+
+
+
+
+
+AB4755PC-1010		
+
+
+AB4755PC-1010	Page 9	
+
+</pre></article><article class="doc"><h2>MH5005.txt</h2><div class="meta"><a class="btn" href="/mhpoly/library/MH5005.txt" download>Download</a> <span class="note">Source: <code>/mhpoly/library/MH5005.txt</code></span></div><pre> 
+Specialty Homeowners Program
+
+
+
+American Bankers Insurance Company of Florida  
+[A Stock Insurance Company]
+
+[11222 Quail Roost Drive, Miami, FL 33157-6596 · 305.253.2244]
+
+ 
+Specialty Homeowners Program
+
+POLICY INDEX
+
+
+	Page	Page
+
+ 
+INSURING AGREEMENT	2
+
+DEFINITIONS	2-3
+
+SECTION I - PHYSICAL DAMAGE COVERAGES	3-5
+	Coverage A - Dwelling	3-4
+	Coverage B - Adjacent Structures	3-4
+	Coverage C - Personal Property	4-5
+	Coverage D - Additional Living Expense	5
+	Additional Coverages	5
+	Debris Removal	5
+	Emergency Removal Service	5
+	Fire Department Service	5
+Radio Antennas, Television Antennas and
+  Satellite Dishes	5
+	Trees, Shrubs, Plants, and Lawn	5
+
+SECTION I - EXCLUSIONS	5-6
+
+SECTION I - CONDITIONS	6-9
+	Duties After Loss	6-7
+	Our Payment Methods	7
+	Salvage	7
+	Deductible	7-8
+	Appraisal	8
+	Action Against Us	8
+	Automatic Reinstatement of Coverage	8
+	Lienholder Interest	8-9
+	Limit of Liability	9
+	Location 	9
+	Other Insurance	9
+	Abandonment of Property	9
+SECTION II - PERSONAL LIABILITY COVERAGE	9-10
+	Coverage E - Personal Liability	9
+	Additional Personal Liability Coverages	9-10
+	Claim Expenses	9-10
+	Damage to Property of Others	10
+	First Aid	10
+	Coverage F - Medical Payments to Others	10
+
+SECTION II - EXCLUSIONS	10-11
+
+SECTION II - CONDITIONS	11-12
+	Duties After Occurrence	11-12
+Duties of an Injured Person - Coverage F – Medical
+	Payments to Others 	12
+	Limit of Liability	12
+	Severability of Insurance	12
+	Location	12
+	Other Insurance - Coverage E - 
+	Personal Liability	12
+	Action Against Us	12
+
+SECTIONS I AND II - CONDITIONS	12-14
+	Cancellation	12-13
+	Nonrenewal	13
+	Changes in Your Policy	13
+	Subrogation	13
+	Transfer of This Policy	13
+	Misrepresentation, Concealment or Fraud	13
+	Bankruptcy	13
+	Important Notice	14
+
+ 
+
+
+
+ 
+
+ 
+INSURING AGREEMENT
+
+We will provide the insurance described in this policy in return for the payment of premium and compliance with all applicable provisions of this policy.
+
+We provide insurance only for covered losses, which occur during the policy period, and only when premium charges for specific coverages are indicated on the Declarations Page.
+
+The Declarations Page shows the policy period, coverages, limits of liability, deductibles and premium(s).  This policy is not complete without the Declarations Page. 
+
+DEFINITIONS
+
+“You,” “your,” “yours,” and “named insured” mean the person named on the Declarations Page and the spouse if a resident of the dwelling.
+
+“Insured person(s)” means you and residents of your insured dwelling who are:
+	1.	Your relatives; or
+	2.	Other persons under the age of 21 and in the care of any person named above.
+
+“We,” “us,” and “our” mean the insurer shown on the Declarations Page.
+
+“Actual cash value” means the amount it would cost you to repair or replace damaged property with material of like kind and quality, less deduction for physical deterioration and depreciation, including obsolescence.
+
+“Additional living expense” means necessary increase in living expenses incurred by you so that your household can maintain its normal standard of living.
+
+“Aircraft” means any contrivance used or designed for flight.  This does not include model or hobby aircraft not used or designed to carry people or cargo.
+
+“Bodily injury” means bodily harm, sickness, disease, and includes necessary care, loss of services and resulting death of any person other than an insured person or any resident of your dwelling.
+
+“Burglary” means the breaking and entering of the insured location with intent to commit a crime. There must be visible signs of forced entry.
+
+“Business” means:
+	1.	Any full or part-time trade, profession, occupation or activity engaged in for compensation;
+	2.	Rental or holding for rental part of the insured location or of any premises as a residence, private garage, office, or school;
+	3.	Providing home day care services to a person(s) other than insured persons and receiving monetary or other compensation for such services.
+
+“Conversion” means the wrongful use of insured property by someone in lawful possession of the property including the transfer of ownership without the permission of the lienholder or any other party holding an interest in the property.
+
+“Dwelling” means the home described on the Declarations Page and any structures permanently attached to the home.  It does not include any unattached structures, nor any structures connected by only a fence, utility line or similar connection, nor the land on which the home is located. 
+
+“Earthquake” means land shock waves or earth tremors, which result from the movement of the earth’s crust along geologic fault lines or caused by volcanic activity.  One or more shock waves that occur within a 72 hour period constitute a single earthquake.
+
+“Flood” means a general and temporary condition of partial or complete inundation of two or more acres of normally dry land area or of two or more properties (at least one of which is your property) from:
+	1.	The overflow of inland or tidal water; or
+	2.	The unusual and rapid build-up or run-off of surface water from any source; or
+	3.	Mudslides or mudflows that are caused by the build-up of water on or under the ground.
+
+Flood can also mean the collapse or subsidence of land along the shore of a lake or of a body of water as a result of erosion or undermining caused by waves or currents of water exceeding anticipated cyclical levels that results in a flood as defined above.
+
+Flood, as defined above, is at least as broad as that offered by the National Flood Insurance Program Standard Flood Insurance Policy.
+
+“In transit” means the period of time during which the leveling jacks or blocks are removed and/or all utilities are disconnected for the purpose of transporting your dwelling from one location to another. This applies whether or not your dwelling is momentarily in motion and whether on a public roadway or otherwise. The in transit period ends when the leveling jacks or blocks are installed and utilities are reconnected.  Your dwelling will not be considered in transit if it is moved because it is threatened by a loss covered by this policy.
+
+“Insured location” means:
+	1.	Under SECTION I – PHYSICAL DAMAGE COVERAGES and SECTION II – PERSONAL LIABILITY COVERAGE, your dwelling, unattached structures and grounds located at the covered property address shown on the Declarations Page.
+	
+2.	In addition, under SECTION II – PERSONAL LIABILITY COVERAGE:
+
+	a.		Adjacent sidewalks to your dwelling;
+	b.	Vacant land other than farmland owned by, or rented to any insured person, including land on which a one or two family dwelling is being built for  the insured person’s use;
+	c.	Premises not owned by an insured person, but which the insured person is temporarily living; or
+	d.	Your individual or family cemetery plots or burial vaults.
+
+“Limit of liability” means the maximum amount we are required to pay in the event of a covered loss. Although amounts paid for a loss may be less than the limit of liability, in no event will the payment exceed such limit of liability, unless specifically stated within the policy. 
+
+“Mysterious disappearance” means the vanishing of covered property that cannot be explained. This includes property that has been lost or misplaced. 
+
+“Occurrence” means an accidental event resulting in a loss.  It includes continuous or repeated exposure to substantially the same general harmful conditions, which results, during the policy period, in:
+	1.	Bodily injury; or
+	2.	Property damage.
+
+“Pollutant” means any solid, liquid, gaseous or thermal irritant or contaminant, including smoke, vapor, soot, fumes, acids, alkalis, chemicals and waste. Waste includes materials to be recycled, reconditioned, or reclaimed.
+
+“Premises” means a building or part of a building, and grounds.
+
+“Property damage” means physical injury to, destruction of, or loss of use of tangible property of others.
+
+“Residence employee” means:
+	1.	An employee of an insured person whose duties are related to the routine maintenance or use of the premises, including household or domestic services; or
+	2.	One who performs similar duties elsewhere not related to the business of any insured person.
+
+“Robbery” means the unlawful taking of property by violence, force or intimidation.
+
+“Secretion” means that someone in legal possession of the dwelling has moved or placed it in a new location, and the owner, lienholder or mortgagee is unaware of the new location.
+
+“Theft” means the unlawful taking of tangible property belonging to another, without consent, with the intent to deprive the owner of the value of the property. Theft does not include conversion or secretion.
+
+SECTION I - PHYSICAL DAMAGE COVERAGES
+
+Physical Damage always refers to damage to property you own.
+COVERAGE A – DWELLING
+
+A.	We will pay up to the limit of liability shown on the Declarations Page for direct, sudden, and accidental loss of, or damage to your covered dwelling, EXCEPT for those causes of loss listed in SECTION I – EXCLUSIONS. 
+
+B.	Coverage A - covers:
+	1.	Your dwelling described on the Declarations Page, its original parts, equipment and accessories furnished by the manufacturer, dealer, or seller of your dwelling and replacements of these items; and 
+	2.	Structures which are permanently attached to your dwelling, including but not limited to skirting, steps, added rooms, carport structures, garage structures, and awnings or porch roof covers; and 
+	3.	Your dwelling tie-down anchoring systems, above-ground foundations and supports, central air conditioners, water pumps, and gas drums that furnish heating or cooking fuel for the dwelling.
+
+C.	Items not covered in Coverage A:
+	1.	Slabs;
+	2.	Driveways;
+	3.	Sidewalks;
+	4.	Swimming pools and hot tubs;
+	5.	Fences and retaining walls;
+	6.	Ponds;
+	7.	Bridges;
+	8.	Roads;
+	9.	Private entrances;
+10.	Playground equipment;
+11.	Structures connected to your dwelling by only a fence, utility line, walkway or similar connection;
+12.	Land, including land on which the dwelling is located;
+13.	Radio antennas, TV antennas and satellite dishes;
+14.	Culverts or dams;
+15.	Docks or piers.
+
+COVERAGE B - ADJACENT STRUCTURES
+
+This coverage is optional. Coverage is provided only if a premium charge for this specific coverage is indicated on the Declarations Page.
+
+A.	If Coverage B is selected, we will pay up to the limit of liability shown on the Declarations Page for direct, sudden, and accidental loss of, or damage to your covered adjacent structures, EXCEPT for those causes of loss listed in SECTION I – EXCLUSIONS.
+	
+B.	Coverage B covers structures at the insured location, which are not attached to your dwelling; including structures connected to your dwelling by only a fence, utility line, walkway or similar connection. This includes, but is not limited to garages, fences, carports, above ground swimming pools, wells and well pumps not attached to your dwelling.
+
+C.	Items not covered under Coverage B:
+	1.	Structures used for farming purposes or for livestock;
+	2.	Radio antennas, TV antennas and satellite dishes;
+	3.	In-ground swimming pools and in-ground hot tubs;
+	4.	Slabs;
+	5.	Driveways; 
+	6.	Sidewalks; 
+	7.	Retaining walls;
+	8.	Roads;
+	9.	Bridges;
+	10.	Ponds;
+	11.	Silos;
+12.	Private Entrances;
+13.	Culverts or dams;
+14.	Land, including land on which the dwelling is located.
+
+COVERAGE C - PERSONAL PROPERTY
+
+This coverage is optional. Coverage is provided only if a premium charge for this specific coverage is indicated on the Declarations Page.
+
+A.	If Coverage C is selected, we will pay up to the limit of liability shown on the Declarations Page for direct, sudden, and accidental loss of, or damage to your covered personal property, EXCEPT for those causes of loss listed in SECTION I – EXCLUSIONS. 
+	
+B.	Coverage C covers personal property located in your insured dwelling or a fully enclosed adjacent structure. Personal property is items incidental to the use of your insured dwelling.
+
+C.	Items not covered in Coverage C:
+	1.	Any motor vehicle, its parts or equipment, licensed or not, for use on or off public roads, EXCEPT:
+	a.	Golf carts, when used for golfing purposes;
+	b.	Residential lawn mowers or equipment not subject to motor vehicle registration, which are usual and incidental to the maintenance of your insured location; and
+	c.	Motorized vehicles not subject to motor vehicle registration which are used to assist the handicapped; 
+	2.	All Terrain Vehicles (ATV’s), snowmobiles, motorcycles, travel trailers,  recreational vehicles, boat motors, boats (motorized or not), personal watercraft, and their parts or equipment;
+	3.	Any device, instrument, cellular communication system, radar signal reception system, accessory or antenna designed for reproducing, detecting, receiving, transmitting, recording or playing back data, sound or picture which may be powered by electricity from a motorized land vehicle or watercraft and while in or upon a motorized land vehicle or watercraft. We do not cover tapes, wires, records, disks or other media that may be used with these devices or instruments while in or upon a motorized land vehicle or watercraft;
+	4.	Animals, fish, birds;
+	5.	Skins, pelts, mounted hunting or fishing trophies;
+	6.	Property of roomers, boarders and tenants;
+	7.	Money, currency or securities;
+	8.	Property separately insured by any other insurance;
+	9.	Any item insured under Adjacent Structures Coverage;
+	10.	Aircraft, its parts or equipment;
+	11.	Gift certificates, stored value cards, pre-paid phone cards and any other cash equivalent items; or
+	12.	Any item not owned by an insured person.
+
+D.	Personal Property Categories Subject to Limited Coverage:
+We will pay only up to these special limits for each category of these special items but not more than $5,000 maximum for all losses from one event regardless of the number of items or categories involved. This does not increase the limit of liability for COVERAGE C – PERSONAL PROPERTY.
+	
+	We will pay for loss to these special categories only when caused by fire, lightning, earthquake, landslide, windstorm, flood, robbery or burglary.
+
+	There is a special limit for the following Personal Property categories:
+	1.	$500 for stamp and coin collections; card collections and collectibles (i.e., baseball cards, porcelain, dolls, trains, crystal, china, plates, knives, die-cast vehicles and other die-cast items, silver, pewter, ceramics, comic book collections, memorabilia and souvenirs, etc.);
+	2.	$1,000 for jewelry, watches, precious and semi-precious stones, art, antiques, and heirlooms;
+	3.	$1,000 for cameras and video recording and/or reproducing devices including but not limited to cameras, video cassette recorders (VCRs), camcorders, digital video disc players, laser disc players, and their media, accessories and equipment;
+	4.	$1,000 for audio recording and/or reproducing devices including but not limited to CD players, radios, record players, and their media, accessories and equipment;
+	5.	$500 for video gaming systems including their media, accessories and equipment;
+	6.	$500 for wireless communication devices including but not limited to cellular telephones, PDA’s, and their media, accessories and equipment;
+	7.	$1,000 for computer, computer software, discs, and any computer related electronic equipment, media and accessories; 
+	8.	$500 for sporting equipment;
+	9.	$500 for musical instruments and their equipment;
+	10.	$500 for firearms,  guns, and their ammunition and equipment;
+	11.	$500 for furs;
+	12.	$1000 for hand and power tools and equipment, and toolboxes;
+	13.	$500 for silverware, silver-plated ware, goldware, gold-plated ware, plantinumware, platinum-plated ware, pewterware, or precious metals. This includes flatware, hollowware, tea sets, trays and trophies made of or including silver, gold or pewter;
+	14.	$500 for bank notes, bullion, gold other than goldware, silver other than silverware, platinum other than platinumware, and medals;
+	15.	$500 for books, accounts, deeds, evidence of debt, letters of credit, notes other than bank notes, manuscripts, passports, tickets and stamps; 
+	16.	$500 for satellite dish accessories and related equipment;
+	17.	$1,000 for utility trailers.
+		
+	If you own any of these special items with values higher than provided here, ask your agent for additional coverage.
+
+E.	Extension of Personal Property Coverage:
+	
+	For personal property located outside of the insured dwelling or fully enclosed adjacent structures, we will pay up to 10% of the limit of liability for loss of, or damage to personal property owned by an insured person caused by fire, lightning, earthquake, landslide, windstorm, flood, or theft. 
+
+COVERAGE D – ADDITIONAL LIVING EXPENSE
+
+We will pay up to $50 a day, not to exceed a total of 10% of the limit of liability for COVERAGE A - DWELLING, for reasonable additional living expenses you pay when you cannot live in your dwelling because it is damaged or destroyed by a covered loss.  Our coverage ends on the earlier of either:
+	1.	When your dwelling is repaired or replaced; or
+	2.	Seven days after we have offered to make a reasonable cash settlement.
+
+This period of time described in items 1 and 2 above is not limited by the expiration of this policy.
+
+We will need paid receipts to verify your reasonable additional living expenses incurred in addition to your normal living expenses.
+
+ADDITIONAL COVERAGES
+
+If COVERAGE A - DWELLING is selected, the following coverages are automatically included and are in addition to the limit of liability shown on the Declarations Page.  No deductible applies to these Additional Coverages.
+	
+	1.	Debris Removal
+
+		We will pay for expenses you incur when you remove debris of covered property, other than trees, which results from a loss covered under this policy.  
+
+		We will also pay for the expense to remove one or more fallen trees from the insured location if the tree(s) is felled by windstorm, hail, lightning or weight of ice, snow or sleet. For the tree removal to be covered, the tree(s) must either damage a covered structure; or block access to a covered structure.
+
+		This coverage does not apply to removal of debris which would be considered normal maintenance.  The most we would pay under Debris Removal is $500 for any one occurrence.
+
+	2.	Emergency Removal Service
+
+		We will pay when your dwelling must be moved because it is threatened by a loss covered by this policy. The amount of coverage is the actual cost up to $500 if your dwelling can be removed in one section or the actual cost up to $1,000 for two or more sections.
+
+3.	Fire Department Service
+
+		We will pay when the fire department is called because of a fire in, or endangering your dwelling as a result of a loss covered by this policy. We will pay for the actual fire department charge you incur up to $250.
+
+	4.	Radio Antennas, Television Antennas and Satellite Dishes
+
+		We will pay the actual cost up to $250 for loss of, or damage to your outside radio antennas, television antennas and satellite dishes located on the insured location caused by fire, lightning, earthquake, landslide, flood, theft, and windstorm.  This is the total maximum amount that will apply to each loss regardless of the number of antennas or satellite dishes damaged. 
+
+	5.	Trees, Shrubs, Plants, and Lawn
+
+		We will pay for loss or damage to your trees, shrubs, plants, and lawn located at your premises caused by fire, lightning, explosion, riot or civil commotion, aircraft, vandalism, malicious mischief or motor vehicles not owned or operated by you. 
+
+		Coverage is the actual cost up to $25 for any one plant or shrub, the actual cost up to $100 for the lawn or one tree, with a maximum combined payment of $250 for each occurrence. We do not insure property grown for business purposes or located more than 300 feet from your dwelling.
+	
+SECTION I - EXCLUSIONS
+
+Regardless of any other cause or event contributing concurrently or in any sequence to the loss, we do not provide payment for physical loss or damage:
+	1.	Due and confined to wear and tear, latent defects, marring, deterioration, inherent vice, neglect, abusive use, mechanical or electrical breakdown or failure, or manufacturer defect.
+	2.	Resulting from or increased by water backing up through sewers or drains or water below the surface of the ground.
+	3.	Caused by enforcement of any governmental requirement regulating construction, confiscation, repair, demolition, sale, occupancy or relocation of your dwelling.
+	4.	If your dwelling, adjacent structures, personal property or premises are being used for any illegal trade or illegal business.
+	5.	Due and confined to leakage from rain, sleet, or snow or its resulting damage whether or not wind driven. However, this exclusion does not apply if a covered peril causes an opening in the roof or to the exterior of your dwelling, which causes the leakage.
+	6.	If your dwelling is used exclusively for any business, commercial or non-residential purposes.
+	7.	If your adjacent structures or personal property are used at any time for business, commercial or non-residential purposes.
+	8.	If an insured person intentionally causes damage to or destruction of the covered dwelling, adjacent structures or personal property. An intentional loss shall mean any loss arising out of any act an insured person commits or conspires to commit with the intent to cause a loss.  No insured person shall be entitled to coverage, even if that insured person did not commit or conspire to commit the act causing the loss.
+	9.	If an insured person intentionally gave us materially false information with intent to deceive in order to obtain this policy or in the presentation of a claim.
+	10.	Due to nuclear action which means nuclear reaction, radiation, or radioactive contamination. Direct loss by fire resulting from nuclear action is insured.
+	11.	Due to war, hostile or warlike action in time of peace or war whether declared or not declared.
+	12.	To tires, wheels, and axles unless damaged by fire or stolen while attached to or from inside your dwelling.
+	13.	By theft, vandalism or malicious mischief, if your dwelling is unoccupied for more than 30 consecutive days before the loss. 
+	14.	Caused by birds, rodents, insects, vermin or animals.
+	15.	Power failure, meaning the failure of power or other utility service if the failure takes place off the insured location and results in loss or damage to the insured property.
+	16.	Due to freezing, rust, corrosion or contamination.
+	17.	Due to smog, smoke from agricultural smudging or industrial operations.
+	18.	By or resulting from repairing, adjusting, servicing or maintenance operation, unless fire or explosion ensues, and then only for the loss or damage by the ensuing fire or explosion.
+	19.	Due to acts of malicious mischief, vandalism, or theft caused by any member of the household or a person in lawful possession or custody of your dwelling.
+	20.	For lost items caused by mysterious disappearance.
+	21.	To your dwelling and adjacent structures while they are in transit.
+	22.	To personal property while your dwelling is in transit.
+	23.	Caused by the presence of condensation, humidity, or vapor, or by continuous or repeated seepage or leakage of water or steam over a period of time.  This exclusion does not apply to loss caused by sudden escape of water from plumbing, heating, an automatic fire protection sprinkler system or any domestic appliance. 	
+	24.	Due to settling, cracking, shrinking, erosion of the soil, bulging or expansion of pavements, patios or foundations of your dwelling or any of its parts.
+	25.	Resulting from any failure or malfunction, inadequacy or inability of any system, accessory, appliance or part of your dwelling to correctly recognize, distinguish, interpret or accept any naturally occurring calendar date.
+	26.	To the tie-down anchoring systems resulting from rust, corrosion, or faulty installation.
+	27.	Caused by or resulting from faulty, inadequate or defective:
+	a.	Planning, zoning, development, surveying, siting;
+	b.	Design, specifications, workmanship, repair, construction, renovation, remodeling, grading, compaction;
+	c.	Materials used in repair, construction, renovation or remodeling; 
+	d.	Maintenance; of part or all of any insured property; or
+	e.	Installation, movement, set-up or transport.
+
+SECTION I - CONDITIONS
+
+DUTIES AFTER LOSS
+
+	1.	In the event of a loss, an insured person must:
+	a.	Notify us promptly. The quickest way is to contact us at the telephone number listed at the end of this policy. Give:
+	(1)	Your name;
+	(2)	Policy number;
+	(3)	How the loss happened, including the nature and extent of the damages; and
+	(4)	Names of witnesses and all other known pertinent facts at the time the insured person reports the loss.
+		b.	Protect your dwelling, adjacent structures 				and personal property from any further 				damage. If you fail to do so, any further 				damage will not be covered under this policy. 				We will pay actual, reasonable expenses for 				necessary emergency repairs incurred in 				protecting your dwelling, adjacent 					structures and personal property from further 				loss or damage if that loss is covered by this 				policy.
+	c.	Report any theft, robbery, burglary or vandalism loss to the police within 24 hours after you discover the loss. You will be required to obtain a copy of the police report. In the event of burglary, the police report must indicate that there were visible signs of forced entry. 
+	2.	If we need other information to investigate the loss, we will ask you for it. We may require this information in writing.
+	3.	We will require in a form prescribed by us that you file with us a signed sworn statement in proof of loss within 90 days after the loss or damage.
+	4.	At our request you must:
+a.	Show us the damaged property as often as reasonably required;
+b.	Provide us with records and documents that we request and permit us to make copies; and 
+	c.	Submit to examination under oath and subscribe to same, separately and apart from any other person defined as you or an insured person.
+	5.	You must cooperate with us in our effort to investigate the loss, settle any claims against you and defend you. If you fail to cooperate, we have the right to deny you coverage in this policy.
+	6.	An insured person will not voluntarily make any payment, assume any obligation, or incur any expenses other than emergency repair.
+	7.	When you have a loss that we cover, we will make settlement within 60 days after we receive an acceptable proof of loss from you and the amount of loss is determined as provided in this policy.
+
+OUR PAYMENT METHODS
+
+Our payment methods are subject to the deductibles and limits of liability as shown on the Declarations Page and elsewhere in this policy for the specific type of loss involved and specific types of property.
+1.	In the event of a loss to your dwelling, adjacent structures and/or personal property we will pay the lowest of:
+
+	a.	The limit of liability for your dwelling, adjacent structures and/or personal property as shown on the Declarations Page of your policy; or
+	b.	The difference between the actual cash value of your property immediately before the loss and its actual cash value immediately after the loss; or
+c.	The cost of repairing the damage; or
+d.	The actual cash value of the damaged property.
+
+	At our option, we may also repair or replace the property with property of like kind and quality.
+
+2.	Our payment methods for specific types of losses
+
+	a.	Hail
+
+	The amount we will pay you for loss or damage to your dwelling or adjacent structures from hail depends on the type of loss or damage it causes.
+	(1)		Structural Hail Loss: Hail can cause structural damage, which is the actual penetration of the exterior surface or the cracking or breaking of support materials. When this type of loss or damage occurs, we will pay you in accordance with the terms described under OUR PAYMENT METHODS, item 1.
+	(2)		Non-Structural Hail Loss: Hail often dents the exterior surface of a dwelling or adjacent structure. Since there is no structural damage, this will in no way affect the utility of your dwelling or adjacent structure. The amount we pay for this will be the difference between the actual cash value of your property immediately before the loss and its actual cash value immediately after the loss.
+
+			You may choose to repair the damage.  If you repair the damage, payment will be made to you for the actual cost to repair less any payment previously made, as described in the paragraph above, for the loss. The claim for repair must be made within 180 days after the loss.
+
+	b.	Pair and Sets
+
+		In the event of a loss to part of a pair, set, series of objects, pieces or panels, either interior or exterior, we have the option to:
+		(1)	Repair or replace any part needed to restore the pair or set to its actual cash value before the loss; or
+(2)	Pay the difference between actual cash value of the pair or set before and immediately after the loss; or
+(3)	Pay the cost of providing an alternative decorative effect or utilization.  However, we do not guarantee the availability of replacements and shall not, in the event of loss to a part, be obligated for the value of, or to repair or replace, the entire series of pieces or panels. 
+		
+	c.	Tie-Downs
+
+	We will pay the replacement cost or repair cost, whichever is less, for a covered loss or damage to your dwelling tie-down anchoring systems.
+
+	At our option, we may also repair or replace tie-downs with property of like kind and quality.
+
+	d.	Stolen Property
+
+	Before a loss for stolen property is paid or the property is replaced, we may return any stolen property to you at our expense with payment for any damage.
+
+SALVAGE
+
+If, as a result of your loss, we compensate you in cash or by replacement, an amount equal to or greater than the actual cash value of your property before the loss, we have the right to take legal title to your property at our option.
+
+DEDUCTIBLE
+
+Certain losses or damage are subject to a deductible amount as shown on the Declarations Page or elsewhere in this policy.
+
+When the loss is the deductible amount or less, there is no recovery under this policy. When the loss is more than the deductible shown, we will pay the amount of loss as determined by OUR PAYMENT METHODS, less the deductible, not to exceed the limit of liability.
+This policy may have different deductibles for:
+	1.	Different coverages; and/or
+	2.	Different perils.
+
+Only one deductible amount will be applied to a loss from one occurrence.  If the deductible amounts are not equal, the highest deductible for the coverages involved in the loss will apply.
+
+Please refer to the Declarations Page or appropriate endorsement for the applicable deductible.
+
+APPRAISAL
+
+If you and we fail to agree on the amount of a covered loss, either may demand an appraisal of the covered loss. In this event, each party will choose a competent appraiser within 20 days after receiving a written request from the other. The two appraisers will choose an umpire. If they cannot agree upon an umpire within 15 days, you or we may request that the choice be made by a judge of a court of record in the state where your dwelling is located. The appraisers will separately set the amount of loss. 
+
+If the appraisers submit a written report of an agreement to us, the amount agreed upon will be the amount of loss. If they fail to agree, they will submit their differences to the umpire. A decision agreed to by any two will set the amount of loss.
+
+Each party will:
+	1.	Pay its own appraiser; and
+2.	Bear the other expenses of the appraisal and umpire equally.
+
+ACTION AGAINST US
+
+No action shall apply against us unless:
+	1.	There has been full compliance with all the terms of this policy; and
+	2.	The action is brought within 2 years from the date when you discover the loss.
+
+AUTOMATIC REINSTATEMENT OF COVERAGE
+
+Any damage to your property will reduce the amount of coverage available by the amount of the damage.  Your coverage will return to the limit of liability shown on the Declarations Page upon completion of repairs or replacements.
+
+LIENHOLDER INTEREST
+
+If you borrowed money to buy your dwelling, the person or business that loaned you the money is called the lienholder. Lienholder means the person, firm, association, corporation, or other legal entity named as the lienholder on the Declarations Page. The designation of a lienholder is considered to be an acknowledgement by you that the entity named has a legal interest in your dwelling due to an installment sales contract or other security agreement. Your lienholder may require you to include their name on the Declarations Page as a separate insured party, for any insurable interest they may have.  If more than one lienholder is named, the order of payment will be the same as the order of precedence of the mortgages.
+
+When a lienholder is named on the Declarations Page, our payment method will recognize the lienholder’s interest in your property. If we elect to settle your loss or damage in money, both your name and your lienholder’s will appear on our payment check. If you have paid off your lienholder, please tell us so that the lienholder’s name may be removed from the policy.
+
+You or the lienholder must let us know of any change of ownership or any increase in hazard which comes to your or the lienholder’s knowledge. If an increase in hazard requires an additional premium, you must pay the additional premium.
+
+If you fail to pay any premium due under this policy, your lienholder may be requested to pay that premium.
+
+If your interest in your dwelling is terminated, our payment methods will recognize only the lienholder’s interest. No change in title or ownership of your dwelling or any negligent acts of yours will cancel the lienholder’s interest in this policy. 
+
+Your lienholder can cancel this policy if your dwelling has been repossessed or foreclosed or the lienholder has otherwise acquired ownership of your dwelling.  The lienholder may then, for the account of all parties at interest in this policy and upon surrender of its copy of the policy, request cancellation of this policy.
+
+If you fail to give us proof of loss within the required 90 days, the lienholder is given an additional 30 days to notify us of the loss. 
+	1.	In the event of a loss, the lienholder must:
+	a.	Notify us promptly. The quickest way is to contact us at the telephone number listed on the last page of this policy. Give:
+	(1)	Insured person(s) name;
+	(2)	Policy number;
+	(3)	How the loss happened, including the nature and extent of the damages; and
+	(4)	Names of witnesses and all other known pertinent facts at the time the lienholder reports the loss.
+	b.	Protect your dwelling and adjacent structures from any further damage. If the lienholder fails to do so, any further damage will not be recoverable under this policy. We will pay actual, reasonable expenses for necessary emergency repairs incurred in protecting your dwelling and adjacent structures from further loss or damage if that loss is covered by this policy.
+	c.	Report any theft, robbery, burglary or vandalism loss to the police within 24 hours after the lienholder discovers the loss. The lienholder must submit a copy of the police report.  In the event of burglary the police report must indicate that there were visible signs of forced entry. 
+	2.	If we need other information to investigate the loss, we will ask the lienholder for it. We may require this information in writing.
+	3.	We will require in a form prescribed by us that the lienholder and/or insured person(s) file with us a signed sworn statement in proof of loss within 90 days after the loss or damage.
+	4.	At our request the lienholder must:
+a.	Show us the damaged property as often as reasonably required; 
+b.	Provide us with records and documents that we request and permit us to make copies; and 
+	c.	Submit to examination under oath and    subscribe to same, separately and apart from any other person defined as an insured person.
+	5.	The lienholder must cooperate with us in our effort to investigate the loss, settle any claims against you and defend you. If the lienholder fails to cooperate, we have the right to deny coverage in this policy with respect to the lienholder.
+	6.	The lienholder will not voluntarily make any payment, assume any obligation, or incur any expenses other than emergency repairs.
+	7.	When the lienholder has a loss that we cover, we will make settlement within 60 days after we receive an acceptable proof of loss from the lienholder and the amount of loss is determined as provided in this policy.
+
+LIMIT OF LIABILITY
+
+The insuring of more than one person by this policy does not increase our limit of liability.
+
+LOCATION
+
+If Dwelling and Adjacent Structures coverage was selected, your policy provides coverage anywhere in the United States or Canada subject to all the terms, limitations and conditions of the policy.  If you move your dwelling, please let us know within 30 days. You must provide us with your new address if you move your dwelling.
+
+If Personal Property Coverage was selected, your policy provides coverage for personal property within the dwelling and adjacent structures.  The Extension of Personal Property covers your personal property while anywhere in the world for specified perils subject to all the terms, limitations and conditions of the policy.
+
+OTHER INSURANCE
+
+Occasionally other insurance pays you or pays for the loss or damage which is also insured by this policy. When this happens, the following rules apply:
+
+If the other insurance is not provided by us, we will pay only for our share of any coverage for any loss or damages in excess of any applicable deductibles. Our share is determined by adding up the limits or amounts of all collectible insurance benefits and finding the percentage of the total which our limits or amount represents.
+
+This policy is excess coverage for Personal Property Coverage if there is other insurance coverage which will pay first.  After the other policy has paid up to its limit, our policy will provide coverage up to its limit, but not exceeding the remainder of your loss.
+
+ABANDONMENT OF PROPERTY
+
+We are not obligated to accept any property or responsibility for any property abandoned by an insured person. Such abandoned property shall remain the sole legal responsibility of the insured person.
+SECTION II – PERSONAL LIABILITY COVERAGE
+
+This coverage is optional. Coverage is provided only if a premium charge for this specific coverage is indicated on the Declarations Page.
+
+When you select Personal Liability Coverage, we automatically include the following coverages:
+	1.	Personal Liability; and
+	2.	Medical Payments to Others.
+
+Personal Liability Coverage provides protection against accidents caused by an occurrence that happens to someone other than either an insured person or any resident of the insured location, for which an insured person is legally liable.  Subject to all policy terms and conditions, we will pay under COVERAGE E PERSONAL LIABILITY for damages an insured person may become legally obligated to pay when the damages occur on the insured location or result from the personal actions of an insured person.
+
+Subject to all policy terms and conditions, we will pay for certain medical expenses whether or not an insured person is legally liable as described under COVERAGE F – MEDICAL PAYMENT TO OTHERS.
+
+COVERAGE E - PERSONAL LIABILITY
+
+If a claim is made or a suit brought against an insured person for damages because of bodily injury or property damage caused by an occurrence to which coverage applies, we will:
+	1.	Pay up to our limit of liability shown on the Declarations Page for the damages for which the insured person is legally liable.
+	2.	Provide defense at our expense by the attorneys of our choice. We may investigate and settle any claim or suit that we decide is appropriate. Our obligation to defend any claims or suit ends when the amount we pay for damages resulting from the occurrence equals our limit of liability shown on the Declarations Page.
+
+ADDITIONAL PERSONAL LIABILITY COVERAGES
+
+We will also cover the following in addition to the limit of liability:
+
+	1.	Claim Expenses
+
+		We will pay:
+	a.	Expenses incurred by us and costs taxed against the insured person in any suit we defend;
+	b.	Premiums on bonds required in a suit defended by us, but not for bond amounts greater than the limit of liability for Personal Liability. We are not obligated to apply for or furnish any bonds;
+	c.	Reasonable expenses incurred by the insured person at our request, including up to $25 a day for actual loss of earnings, for assisting us in the investigation or defense of any claim or suit;
+	d.	Interest on the entire entered judgment until we pay, formally offer, or deposit in court that part of the judgment which does not exceed the limit of our liability on that judgment.
+
+	2.	Damage to Property of Others
+
+		Subject to all policy terms and conditions, we will pay for Damage to Property of Others caused by an insured person up to $500 per occurrence.
+
+		We will not pay for property damage:
+	a.	If the loss is covered under SECTION I – PHYSICAL DAMAGE COVERAGES in this policy;
+	b.	If the loss is caused intentionally by an insured person who has attained the age of 13;
+	c.	For loss to property owned by, or rented to an insured person, a tenant of an insured person or a resident of the insured location; or
+	d.	If the loss arises from:
+	(1)	Business pursuits;
+	(2)	Any act or omission in connection with premises owned, rented, or controlled by  an insured person, other than the insured location; or
+(3)	The ownership, maintenance, or use of a motor vehicle, aircraft, or watercraft.
+
+	3.	First Aid
+
+We will also cover, in addition to the limit of liability, the insured person’s expenses for first aid to others at the scene of an accident caused by an insured person not to exceed $250 per occurrence. We will not pay for first aid to either you or any insured person, or any resident of the insured location.
+
+COVERAGE F - MEDICAL PAYMENTS TO OTHERS
+
+We will pay on behalf of the insured person, up to our limit of liability shown on the Declarations Page, the medical expenses incurred  and medically determined to be causally related to the accident. These expenses must be incurred within one year from the date of an accident causing bodily injury. The accident must occur while the policy is in effect. Medical expenses means reasonable charges for medical, surgical, X-ray, dental, ambulance, hospital, professional nursing, recognized religious method of healing, prosthetic devices and funeral services. This coverage does not apply to either you, any insured person or a resident of the insured location other than residence employees.
+
+Medical Payments to Others applies only:
+	1.	To a person on the insured location with the permission of an insured person.
+	2.	To a person off of the insured location if the bodily injury:
+	a.	Arises out of a condition in the insured location or the sidewalks and driveways adjacent to the insured location;
+	b.	Is caused by the activities of an insured person;
+	c.	Is caused by a residence employee in the course of duties to an insured person; or
+	d.	Is caused by an animal owned by or in care of an insured person.
+
+SECTION II - EXCLUSIONS
+
+	1.	Personal Liability and Medical Payments to Others does not pay for bodily injury or property damage:
+	a.	Arising out of the serving or furnishing of alcoholic beverages to any person;
+	b.	Arising out of the business pursuits of any insured person;
+	c.	Arising out of the rental or holding for rental of any part of any insured location, except for rental by up to two boarders for residential use at a location also occupied by an insured person;
+	d.	Arising out of the rendering or failing to render professional services;
+	e.	Arising out of any premises, other than an insured location, owned by or rented to an insured person;
+	f.	Arising out of the ownership, maintenance, use, loading or unloading of:
+	(1)	Any motor vehicle licensed or not for road use, on or off public roads, EXCEPT:
+	(a)	Golf carts while used for golfing; 
+	(b)	Residential lawn mowers or equipment not subject to motor vehicle registration, which are usual and incidental to the maintenance of your insured location; and
+	(c)	Motorized vehicles not subject to motor vehicle registration which are used to assist the handicapped.
+	(2)	Aircraft and parts;
+	(3)	Watercraft whether owned, borrowed or rented if:
+	(a)	The watercraft has inboard-outboard motor(s) exceeding 50 horsepower;
+	(b)	It is a sailing vessel, with or without auxiliary power, 26 feet or more in overall length;
+	(c)	It is powered by one or more outboard motors with more than 25 combined total horsepower; or
+	(d)	It is a personal watercraft;
+	(4)	All Terrain Vehicles (ATV’s), snowmobiles, motorcycles, travel trailers, recreational vehicles, and their parts or equipment;
+	g.	Arising out of vicarious liability, whether or not statutorily imposed, for the actions of a child or a minor with regard to:
+	(1)	The ownership, maintenance, use, loading or unloading of a motor vehicle, land conveyance, aircraft or watercraft not covered under this policy;
+	(2)	The entrustment by an insured person of a motor vehicle, land conveyance, aircraft or watercraft to any person;
+	h.	Arising out of the actual, alleged, or threatened discharge, dispersal, release or escape of pollutants at or from the insured location you own or elsewhere;
+	i.	Arising out of loss, cost, or expense from any governmental direction or request that you test for, monitor, clean up, remove, contain, treat, detoxify, or neutralize pollutants;
+	j.	Arising out of communicable diseases or sickness as may have been transmitted by you or any insured person or as may have arisen from you or any insured person’s activities. 
+	k.	Arising out of any corporal punishment, physical or mental abuse or sexual acts, including bodily injury or property damage arising out of any sexual act, including, but not limited to assault, molestation, abuse, incest or rape;
+	l.	Arising out of the use, sale, manufacture, delivery, transfer, or possession by any person of a Controlled Substance(s) as defined under federal law. Controlled Substances include but are not limited to cocaine, LSD, marijuana, and all narcotic drugs. However, this exclusion does not apply to the legitimate use of prescription drugs, by a person following the orders of a licensed physician.
+m.	Which is expected or intended by an insured person even if the bodily injury or property damage:
+
+	(1)	Is of different kind, quality or degree than initially expected or intended; or
+	(2)	Is sustained by a different person or entity than initially expected or intended; or
+	(3)	Is sustained by different real or personal property than initially expected or intended.
+
+	Expected or intended shall mean any act an insured person commits or conspires to commit with the intent to cause bodily injury or property damage. In the event of an intentional loss, no insured person is entitled to coverage, even an insured person who did not commit or conspire to commit the act causing the bodily injury or property damage;
+	n.	Caused directly or indirectly by war, hostile or warlike action in time of peace or war whether or not declared, riot or civil disorder;
+	o.	To an insured person(s) if loss or damage is caused directly or indirectly by any insured person(s);
+	p.	If an insured person(s) regularly provides home day care services to a person or persons other than an insured person(s) and receives monetary or other compensation for such services. Mutual exchange of home day care services is not compensation. The rendering of home day care services by an insured person to a relative of an insured person is not considered a business;
+	q.	If your dwelling has been repossessed or foreclosed.
+
+	2.	Personal Liability does not pay for bodily injury or property damage for:
+	a.	Liability assumed in any contract or agreement in connection with any business of an insured person;
+	b.	Damage to property owned by an insured person;
+	c.	Damage to property rented to, occupied or used by an insured person or in care, custody or control, of an insured person except sudden and accidental damage from fire, explosion, smoke or smudge caused by an insured person;
+	d.	Any person eligible to receive any benefits required to be provided by an insured person under any worker’s compensation, non-occupational disability or occupational disease law; or
+	e.	Any insured person if the insured person is also insured by a nuclear energy liability policy whether or not its limit of liability has been exhausted.
+
+	3.	Medical Payments to Others does not pay for bodily injury:
+	a.	To a residence employee if bodily injury occurs off the insured location and does not arise out of, or in the course of the employment by  an insured person;
+	b.	To any person eligible to receive any benefits required to be provided or voluntarily provided by any worker’s compensation, non-occupational disability or occupational disease law; or
+	c.	From nuclear action meaning nuclear reaction, radiation or radioactive contamination.
+
+SECTION II - CONDITIONS
+
+DUTIES AFTER OCCURRENCE
+
+	1.	In the event of  an occurrence you or any other insured person must notify us promptly. The quickest way is to contact us at the telephone number listed on the last page of this policy. Give:
+	a.	Your name;
+	b.	Policy number;
+	c.	How the loss happened, including the nature and extent of the damages or injuries;
+	d.	Name of witnesses and all other known pertinent facts at the time the insured person reports the loss.
+	2.	Send us promptly any legal papers received relating to any claim or suit.
+	3.	The insured person must cooperate with us and assist us in any matter relating to a claim or suit.  If the insured person fails to cooperate, we have the right to deny the insured person coverage under this policy.
+	4.	If a loss covered under Damage to Property of Others occurs, send us, within 60 days of the loss, sworn proof of loss and show the damaged property, if within the insured person’s control.
+	5.	An insured person will not voluntarily make any payment, assume any obligation, or incur any expenses other than First Aid Expenses.
+
+DUTIES OF AN INJURED PERSON - COVERAGE F - MEDICAL PAYMENTS TO OTHERS
+
+The injured person or someone acting on behalf of the injured person will:
+	1.	Give us, as soon as possible, written proof of claim under oath if required;
+	2.	Submit to physical examinations at our expense by doctors we select as often as we may reasonably require;
+	3.	Authorize us to obtain medical and other records.
+
+If we make a payment under COVERAGE F – MEDICAL PAYMENTS TO OTHERS, this is not an admission of liability by the insured person or us.
+
+LIMIT OF LIABILITY
+
+Our total liability under SECTION II – PERSONAL LIABILITY for all damages resulting from any one occurrence will not be more than the limit of liability shown for this coverage on the Declarations Page. This limit is the same regardless of the number of insured persons, claims made or persons injured.  All bodily injury and property damage resulting from any one accident or from continuous or repeated exposure to substantially the same general harmful conditions will be considered to be the result of one occurrence.
+
+Our total liability under COVERGE F – MEDICAL PAYMENTS TO OTHERS for all medical expenses payable for bodily injury to one person as the result of one accident will not be more than the Medical Payments to Others Coverage limit of liability coverage shown on the Declarations Page.
+
+SEVERABILITY OF INSURANCE
+
+This insurance applies separately to each insured person against whom claim is made or suit is brought, subject to our limit of liability. This condition will not increase our limit of liability for any one occurrence.
+
+LOCATION
+
+If Personal Liability Coverage was selected and is shown on the Declarations Page, your policy provides this coverage anywhere in the world subject to all the terms, limitations and conditions of the policy.
+
+OTHER INSURANCE - COVERAGE E - PERSONAL LIABILITY
+
+This insurance is excess over other valid and collectible insurance except insurance written specifically to cover as excess over the limit of liability that applies in this policy.
+
+
+
+
+
+ACTION AGAINST US
+
+	1.	No action can be brought against us unless there has been full compliance with all of the terms under SECTION II of the policy. 
+2.	No one will have the right to join us as a party to any action against an insured person.
+3.	Also, no action with respect to Coverage E can be brought against us until the obligation of such insured person has been determined by final judgment or agreement signed by us.
+
+SECTIONS I AND II - CONDITIONS
+
+CANCELLATION
+
+You can cancel your policy by mailing to us a written request prior to the date cancellation is to be effective. If a lienholder is named on the Declarations Page, we will mail written notice to the lienholder 10 days prior to cancellation of the lienholder’s interest in this policy.
+
+We may cancel this policy only for the reasons stated below. We will notify you in writing. Notice will include the date cancellation takes effect and the reason for cancellation. This cancellation notice may be delivered or mailed to you at the mailing address shown on the Declarations Page or the last known addresses.
+Proof of mailing will be sufficient proof of notice.
+	1.	When you have not paid the premium, we may cancel at any time by letting you know at least 10 days before the date cancellation takes effect.
+	2.	When this policy has been in effect for less than 60 days and is not a renewal with us, we may cancel for any reason by letting you know at least 30 days before the date cancellation takes effect.
+	3.	When this policy has been in effect for 60 days or more or at any time if it is a renewal with us, we may cancel if you or your representative:
+	a.	Conceal, omit or misrepresent any material facts or circumstances; or
+	b.	Make a false or fraudulent claim; or
+	c.	Have knowledge of any change that substantially increases the risk assumed by us without notifying us.
+
+Your lienholder can cancel this policy if your dwelling has been repossessed or foreclosed or the lienholder has otherwise acquired ownership of your dwelling. The lienholder may then, for the account of all parties at interest in this policy, send written request to cancel this policy. 
+
+If you request cancellation of this policy:
+	a.	For policies with a term of one year or less the return premium will be calculated at 90% of the pro rata unearned premium. Each renewal policy is considered a separate term.
+	b.	For policies with a term of more than one year and cancelled during the first year, the return premium will be calculated at 90% of the pro rata unearned premium for the remainder of the first year; and all subsequent years will be fully refunded. If the cancellation is requested after the first year, the return premium will be calculated pro rata for the current year and all the remaining years will be fully refunded.
+
+If the lienholder or we cancel the policy, the return premium will be calculated pro rata, regardless of the term of the policy.
+
+Pro rata cancellation means that we keep premium only for the period of time you were insured without a cancellation fee.  Ninety percent (90%) of the unearned premium means that we keep premium for the period of time you were insured, and a percentage charge of the unused portion to cover cancellation expenses.
+
+If there is any refund or premium due, we will refund premium to the payer of record within a reasonable time after the cancellation takes effect.  The refund of premium is not required for the cancellation to take effect.
+
+NONRENEWAL
+
+We agree to offer to renew your policy unless we mail to you, at least 30 days before the “To” date shown on the Declarations Page, written notice of our intention not to renew this policy. With your payment of the premium, we will renew this policy. Proof of mailing will be sufficient proof of notice.
+
+CHANGES IN YOUR POLICY
+
+If any provision of this policy is in conflict with your state’s or the Federal Government’s laws or regulations at the time your policy is written, it is automatically changed to conform with those laws or regulations.
+We will automatically give you the benefits of any extension or broadening of this policy, if the change does not require an additional premium.
+
+When your policy is renewed, continued, or extended, we will furnish you any form revisions applicable to your coverage.
+
+The only other way this policy can be changed is if we change it in writing, which will be made a part of this policy. Any change in your premium will be made at that time.
+
+SUBROGATION
+
+An insured person may waive in writing before a loss all right of recovery against any person. If not waived, we may require an assignment of rights of any recovery for a loss to the extent that payment is made by us.
+
+If an assignment is sought, the insured person must sign and deliver all related papers and cooperate with us.
+
+Subrogation does not apply under COVERAGE F – MEDICAL PAYMENT TO OTHERS or Damage to Property of Others.
+
+TRANSFER OF THIS POLICY
+
+No interest in this policy can be transferred without our written consent. If you die, this policy will continue in force, unless cancelled in accordance with the cancellation provision, for the remainder of the time between the “From” and “To” date shown on the Declarations Page. This policy will only continue for other members of your family entitled to coverage at the time of your death or for your legal representative.
+
+MISREPRESENTATION, CONCEALMENT OR FRAUD
+
+Under SECTION I – PHYSICAL DAMAGE COVERAGES and under SECTION II – PERSONAL LIABILITY COVERAGE, with respect to any insured person covered under this policy, we provide no coverage for loss if, whether before or after a loss, any insured person has:
+	1.	Intentionally concealed or misrepresented any material fact or circumstance; or
+	2.	Engaged in fraudulent conduct; or
+	3.	Made false statements relating to this insurance.
+
+BANKRUPTCY
+
+If an insured person becomes bankrupt or insolvent we will still be obligated by this policy, subject to all terms and conditions. 
+
+ 
+This policy is signed at the Home Office of American Bankers Insurance Company of Florida, Miami, Florida, by its President and Secretary. It is countersigned on the Declarations Page by our authorized representative(s), if required.
+
+ 
+
+
+
+
+
+
+
+
+IMPORTANT NOTICE
+TO REPORT A CLAIM CALL
+1-800-358-0600
+
+Always Have Your Policy Number Available
+When Reporting A Claim
+
+ARSON PREVENTION PROGRAM
+American Bankers Insurance Company of Florida will pay
+$1,000.00
+for information leading to the conviction of any person for
+arson to a dwelling or vehicle insured by the Company.
+ 
+
+</pre></article>  </div>
 </body>
 </html>
