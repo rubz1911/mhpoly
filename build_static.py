@@ -6,12 +6,24 @@ repo_full = os.environ.get("GITHUB_REPOSITORY", "rubz1911/mhpoly")
 owner, repo = repo_full.split("/")
 BASE_PATH = f"/{repo}"
 BASE_URL  = f"https://{owner}.github.io/{repo}"
+RAW_BASE  = f"https://raw.githubusercontent.com/{owner}/{repo}/main"
 
 lib_dir = pathlib.Path("library")
 lib_dir.mkdir(exist_ok=True)
 
 # Find all .txt files in /library (UTF-8)
 files = sorted([p for p in lib_dir.glob("*.txt")], key=lambda p: p.name.lower())
+
+# ---- all-policies.txt (plain text aggregator) ----
+agg = []
+for p in files:
+    try:
+        txt = p.read_text(encoding="utf-8", errors="replace")
+    except Exception as e:
+        txt = f"(Error reading {p.name}: {e})"
+    sep = "=" * 80
+    agg.append(f"{sep}\n{p.name}\n{sep}\n{txt}\n\n")
+pathlib.Path("all-policies.txt").write_text("".join(agg), encoding="utf-8")
 
 # ---- robots.txt ----
 robots_txt = f"""User-agent: *
@@ -21,7 +33,9 @@ Sitemap: {BASE_URL}/sitemap.xml
 pathlib.Path("robots.txt").write_text(robots_txt, encoding="utf-8")
 
 # ---- sitemap.xml ----
-urls = [f"{BASE_URL}/"] + [f"{BASE_URL}/library/{p.name}" for p in files]
+urls = [f"{BASE_URL}/",
+        f"{BASE_URL}/all-policies.txt"] + \
+       [f"{BASE_URL}/library/{p.name}" for p in files]
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for u in urls:
@@ -65,14 +79,17 @@ head = f"""<!DOCTYPE html>
       This page is statically generated on each push. All policy text is inlined below for crawler/copilot access.
     </div>
     <nav>
-      <p><strong>Direct links (no JS):</strong></p>
+      <p><strong>Direct links (crawler-friendly):</strong></p>
       <ul>
 """
 
 for p in files:
-    head += f'        <li><a href="{BASE_PATH}/library/{html.escape(p.name)}">{html.escape(p.name)}</a></li>\n'
+    head += f'        <li><a href="{BASE_PATH}/library/{html.escape(p.name)}">{html.escape(p.name)}</a> — ' \
+            f'<a href="{RAW_BASE}/library/{html.escape(p.name)}" rel="nofollow">raw</a></li>\n'
 
-head += """      </ul>
+head += f"""        <li><a href="{BASE_PATH}/all-policies.txt">all-policies.txt</a> — 
+            <a href="{RAW_BASE}/all-policies.txt" rel="nofollow">raw</a></li>
+      </ul>
     </nav>
   </header>
   <div id="docs">
@@ -94,6 +111,7 @@ else:
             f'<div class="meta">'
             f'<a class="btn" href="{BASE_PATH}/library/{html.escape(p.name)}" download>Download</a> '
             f'<span class="note">Source: <code>{BASE_PATH}/library/{html.escape(p.name)}</code></span>'
+            f' — <a href="{RAW_BASE}/library/{html.escape(p.name)}">Open raw (text/plain)</a>'
             f'</div>'
             f'<pre>{html.escape(txt)}</pre>'
             f'</article>'
@@ -105,4 +123,4 @@ parts.append("""  </div>
 """)
 
 pathlib.Path("index.html").write_text("".join(parts), encoding="utf-8")
-print("Wrote index.html, sitemap.xml, robots.txt")
+print("Wrote index.html, all-policies.txt, sitemap.xml, robots.txt")
