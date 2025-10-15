@@ -1,0 +1,36 @@
+name: Build static index
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate static files
+        run: python build_static.py
+
+      - name: Commit & push if changed
+        shell: bash
+        run: |
+          set -e
+          if [[ -n "$(git status --porcelain index.html sitemap.xml robots.txt)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.html sitemap.xml robots.txt
+            git commit -m "Build static index (inline text + sitemap + robots)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
