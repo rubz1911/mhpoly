@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+# ✅ give the workflow write access to push commits
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
