@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MH Poly — Text Viewer</title>
+  <title>MH Poly — Policy Library</title>
   <style>
     :root{--pad:16px;--radius:16px;--shadow:0 8px 20px rgba(0,0,0,0.08);--muted:#666;}
     *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
@@ -15,57 +15,80 @@
     .doc h2{margin:0 0 8px 0;font-size:1.15rem}
     .doc .meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
     .doc pre{white-space:pre-wrap;margin:0;overflow-wrap:anywhere}
-    .error{background:#fff3f3;border:1px solid #f2c2c2;color:#8b0000;border-radius:12px;padding:12px}
     .btn{border:1px solid #ddd;background:#fafafa;border-radius:12px;padding:6px 10px;text-decoration:none;color:#222}
     .btn:hover{background:#f0f0f5}
     code{background:#f0f0f5;padding:2px 6px;border-radius:6px}
+    .error{background:#fff3f3;border:1px solid #f2c2c2;color:#8b0000;border-radius:12px;padding:12px}
   </style>
 </head>
 <body>
   <header>
-    <h1>MH Poly — Text Viewer</h1>
+    <h1>MH Poly — Policy Library</h1>
     <div class="note">
-      Repo assumed: <code>rubz1911/mhpoly</code> • Base URL: <code>https://rubz1911.github.io/mhpoly</code><br/>
-      File must be saved as <strong>UTF‑8</strong> to avoid � characters. (In Notepad: Save As → Encoding: UTF‑8)
+      Displays all text files from <code>/mhpoly/library/</code>. Each policy renders inline below.
+      Ensure files are saved as <strong>UTF-8</strong> to avoid replacement characters.
     </div>
   </header>
 
-  <article class="doc" id="doc">
-    <h2>MH5005.txt</h2>
-    <div class="meta">
-      <a id="download" class="btn" href="#">Download</a>
-      <span class="note">Rendering inline from <code>/mhpoly/library/MH5005.txt</code></span>
-    </div>
-    <pre id="content">Loading…</pre>
-  </article>
+  <div id="docs">Loading…</div>
 
   <script>
-    const BASE_PATH = "/mhpoly";               // repo base path
-    const FILENAME = "MH5005.txt";             // single file to display
-    const FILE_URL = `${location.origin}${BASE_PATH}/library/${encodeURIComponent(FILENAME)}`;
+    // Repo base path
+    const BASE_PATH = "/mhpoly";
 
-    document.getElementById("download").href = FILE_URL;
+    // Files to render (order matters)
+    const FILENAMES = [
+      "MH5005.txt",
+      "MH4755.txt",
+      "MH4080.txt",
+      "COI0003C_CIMPLE.txt"      
+    ];
 
-    async function load(){
-      const pre = document.getElementById("content");
-      try{
-        const res = await fetch(FILE_URL, {cache:"no-store"});
-        if(!res.ok){
-          pre.outerHTML = errBox(`Could not load <code>${FILENAME}</code>.<br>URL: <code>${FILE_URL}</code><br>Status: ${res.status} ${res.statusText}`);
-          return;
+    const ROOT = `${location.origin}${BASE_PATH}/library/`;
+    const container = document.getElementById("docs");
+
+    function sectionTemplate(name, bodyHtml){
+      return `
+        <article class="doc">
+          <h2>${escapeHtml(name)}</h2>
+          <div class="meta">
+            <a class="btn" href="${ROOT}${encodeURIComponent(name)}" download>Download</a>
+            <span class="note">Source: <code>${BASE_PATH}/library/${escapeHtml(name)}</code></span>
+          </div>
+          <pre>${bodyHtml}</pre>
+        </article>
+      `;
+    }
+
+    function escapeHtml(s){
+      return s.replace(/[&<>"']/g, m => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+      }[m]));
+    }
+
+    async function loadAll(){
+      container.innerHTML = "";
+      for(const name of FILENAMES){
+        const url = ROOT + encodeURIComponent(name);
+        try{
+          const res = await fetch(url, {cache:"no-store"});
+          if(!res.ok){
+            container.insertAdjacentHTML("beforeend",
+              sectionTemplate(name, `Could not load. Status: ${res.status} ${res.statusText}`));
+            continue;
+          }
+          const text = await res.text();
+          container.insertAdjacentHTML("beforeend", sectionTemplate(name, escapeHtml(text)));
+        }catch(e){
+          container.insertAdjacentHTML("beforeend",
+            sectionTemplate(name, "Network error while fetching this file."));
+          console.error(e);
         }
-        const text = await res.text();
-        pre.textContent = text;
-      }catch(e){
-        pre.outerHTML = errBox(`Network error fetching <code>${FILENAME}</code> from <code>${FILE_URL}</code>.`);
-        console.error(e);
       }
+      if(container.innerHTML.trim() === "") container.textContent = "No files to display.";
     }
 
-    function errBox(msg){
-      return `<div class="error">${msg}</div>`;
-    }
-    load();
+    loadAll();
   </script>
 </body>
 </html>
