@@ -2,8 +2,9 @@ name: Build static index
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch: {}
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,12 +14,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate static index.html, sitemap.xml, robots.txt
+        shell: bash
         run: |
-          python3 - << 'PY'
-          import os, glob, html, datetime, pathlib
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, html, pathlib
 
           # Derive owner/repo and base URL for GitHub Pages
-          repo_full = os.environ.get("GITHUB_REPOSITORY","rubz1911/mhpoly")
+          repo_full = os.environ.get("GITHUB_REPOSITORY", "rubz1911/mhpoly")
           owner, repo = repo_full.split("/")
           base_path = f"/{repo}"
           base_url  = f"https://{owner}.github.io/{repo}"
@@ -45,17 +48,17 @@ Sitemap: {base_url}/sitemap.xml
           sm.append("</urlset>\n")
           pathlib.Path("sitemap.xml").write_text("\n".join(sm), encoding="utf-8")
 
-          # ---- index.html (static, no JS needed) ----
+          # ---- index.html (static, no JS) ----
           style = """
           :root{--pad:16px;--radius:16px;--shadow:0 8px 20px rgba(0,0,0,0.08);--muted:#666;}
           *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
           body{margin:0;background:#f7f7fb;color:#222;line-height:1.55;padding:24px;max-width:1000px;margin-inline:auto;}
           header{margin-bottom:20px;}
           h1{margin:0 0 6px 0;font-size:1.6rem;}
-          .note{color:var(--muted);font-size:0.95rem;margin-top:4px}
-          .doc{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:var(--pad);margin:18px 0;}
+          .note{color:#666;font-size:0.95rem;margin-top:4px}
+          .doc{background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.08);padding:16px;margin:18px 0;}
           .doc h2{margin:0 0 8px 0;font-size:1.15rem}
-          .doc .meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+          .doc .meta{color:#666;font-size:0.9rem;margin-bottom:8px}
           .doc pre{white-space:pre-wrap;margin:0;overflow-wrap:anywhere}
           .btn{border:1px solid #ddd;background:#fafafa;border-radius:12px;padding:6px 10px;text-decoration:none;color:#222}
           .btn:hover{background:#f0f0f5}
@@ -104,7 +107,6 @@ Sitemap: {base_url}/sitemap.xml
                 txt = p.read_text(encoding="utf-8", errors="replace")
               except Exception as e:
                 txt = f"(Error reading file: {e})"
-
               parts.append(
                 f'<article class="doc">'
                 f'<h2>{html.escape(p.name)}</h2>'
@@ -126,6 +128,7 @@ Sitemap: {base_url}/sitemap.xml
           PY
 
       - name: Commit & push if changed
+        shell: bash
         run: |
           set -e
           if [[ -n "$(git status --porcelain index.html sitemap.xml robots.txt)" ]]; then
