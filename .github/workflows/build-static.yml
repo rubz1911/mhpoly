@@ -38,3 +38,6 @@ jobs:
           else
             echo "No changes to commit."
           fi
+      - name: Ping Bing with sitemap
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://rubz1911.github.io/mhpoly/sitemap.xml" || true
