@@ -1,0 +1,7 @@
+Welcome to your one-page knowledge library.
+
+• Upload .txt or .html documents into this 'library' folder.
+• Edit index.html and update the FILENAMES list with your file names, e.g.:
+  const FILENAMES = ["welcome.txt", "my-notes.html", "policy.txt"];
+
+Everything will render on https://rubz1911.github.io/mhpoly/ once GitHub Pages is enabled.
