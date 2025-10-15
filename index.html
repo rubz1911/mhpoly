@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Knowledge Library — MH Poly</title>
+  <title>MH Poly Knowledge Library</title>
   <style>
     :root{--pad:16px;--radius:16px;--shadow:0 8px 20px rgba(0,0,0,0.08);--muted:#666;}
     *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial;}
@@ -16,61 +16,62 @@
     .doc .meta{color:var(--muted);font-size:0.9rem;margin-bottom:8px}
     .doc .content{overflow-wrap:anywhere}
     .doc pre{white-space:pre-wrap;margin:0}
-    .error{color:#b00020}
-    .hidden{display:none}
-    .topbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+    .error{background:#fff3f3;border:1px solid #f2c2c2;color:#8b0000;border-radius:12px;padding:12px}
     .btn{border:1px solid #ddd;background:#fafafa;border-radius:12px;padding:6px 10px;text-decoration:none;color:#222}
     .btn:hover{background:#f0f0f5}
     a{color:#0b57d0;text-decoration:none}
     a:hover{text-decoration:underline}
+    code{background:#f0f0f5;padding:2px 6px;border-radius:6px}
   </style>
 </head>
 <body>
   <header>
-    <div class="topbar">
-      <strong>MH Poly Knowledge Library</strong>
-      <span class="note">All policy documents below are loaded from the <code>/library/</code> folder.</span>
-    </div>
+    <h1>MH Poly Knowledge Library</h1>
     <div class="note">
-      Repo: <code>rubz1911/mhpoly</code> — Pages URL: <code>https://rubz1911.github.io/mhpoly/</code>
+      Repo: <code>rubz1911/mhpoly</code> — URL base assumed: <code>https://rubz1911.github.io/mhpoly</code><br/>
+      All files are fetched from <code>/mhpoly/library/</code>.
     </div>
   </header>
 
   <div id="container"></div>
 
   <script>
-    // ---------- FILES TO LOAD ----------
+    // ====== YOUR FILES (edit if you rename) ======
     const FILENAMES = [
       "MH 4080.html",
       "COI0003C CIMPLE.html",
       "4755 TX MH policy.html",
       "MH Specialty policy 5005.html"
     ];
-    // ----------------------------------
+    // =============================================
+
+    // Hard-set base path for your repo; avoids path ambiguity
+    const BASE_PATH = "/mhpoly";
+    function fileUrl(name){
+      // Always build absolute path from repo base (handles custom domains too)
+      return `${location.origin}${BASE_PATH}/library/${encodeURIComponent(name)}`;
+    }
 
     const container = document.getElementById("container");
-
     FILENAMES.forEach(loadDoc);
-
-    function pagesBase(){
-      return `${location.origin}${location.pathname.replace(/\/index\.html?$/,'')}`;
-    }
-    function fileUrl(name){
-      return `${pagesBase()}/library/${encodeURIComponent(name)}`;
-    }
 
     async function loadDoc(name){
       const wrap = document.createElement("article");
       wrap.className = "doc";
-      wrap.innerHTML = `<h2>${escapeHtml(name)}</h2>
-                        <div class="meta"><a class="btn" href="${fileUrl(name)}" download>Download</a></div>
-                        <div class="content">Loading…</div>`;
+      const url = fileUrl(name);
+      wrap.innerHTML = `
+        <h2>${escapeHtml(name)}</h2>
+        <div class="meta"><a class="btn" href="${url}" download>Download</a></div>
+        <div class="content">Loading…</div>`;
       container.appendChild(wrap);
       const contentEl = wrap.querySelector(".content");
 
       try {
-        const res = await fetch(fileUrl(name), {cache:"no-store"});
-        if(!res.ok) throw new Error(\`HTTP \${res.status}\`);
+        const res = await fetch(url, {cache:"no-store"});
+        if(!res.ok){
+          contentEl.innerHTML = errorBox(\`Could not load <code>${escapeHtml(name)}</code>.<br>URL: <code>${escapeHtml(url)}</code><br>Status: \${res.status} \${res.statusText}\`);
+          return;
+        }
         const isHTML = /\.html?$/i.test(name);
         const text = await res.text();
         if (isHTML) {
@@ -81,10 +82,14 @@
           contentEl.replaceChildren(pre);
         }
       } catch (err) {
-        contentEl.innerHTML = `<span class="error">Could not load this file. Ensure it exists in /library/ and the name matches exactly.</span>`;
+        contentEl.innerHTML = errorBox(\`Network error loading <code>${escapeHtml(name)}</code>.<br>URL: <code>${escapeHtml(url)}</code>\`);
+        console.error(err);
       }
     }
 
+    function errorBox(msg){
+      return `<div class="error">${msg}</div>`;
+    }
     function escapeHtml(s){
       return s.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
     }
